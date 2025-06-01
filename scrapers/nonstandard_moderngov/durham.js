@@ -155,8 +155,8 @@ async function getMinutesForCouncil(councilURL) {
     
     const allCommitteesMeetingData = {};
     const committeeListUrl = `${baseURL}/mgListCommittees.aspx?bcr=1`;
-    const shouldPaginate = false;
-    const processOnlyFirstCommittee = true; // Development flag
+    const shouldPaginate = true;
+    const processOnlyFirstCommittee = false; // Development flag
 
     // Ensure the 'minutes' directory exists
     if (!fs.existsSync('minutes')) {

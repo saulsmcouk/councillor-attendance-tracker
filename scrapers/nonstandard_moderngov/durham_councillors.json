@@ -1,0 +1,1487 @@
+{
+  "Councillor Karen Allison": {
+    "Councillor": {
+      "Name": "Councillor Karen Allison",
+      "UID": "28113",
+      "Committees": [
+        "Cabinet",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor George Anderson": {
+    "Councillor": {
+      "Name": "Councillor George Anderson",
+      "UID": "28115",
+      "Committees": [
+        "Audit Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "County Council",
+        "General Licensing and Registration Committee"
+      ]
+    }
+  },
+  "Councillor John Bailey": {
+    "Councillor": {
+      "Name": "Councillor John Bailey",
+      "UID": "185",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area General Licensing and Registration Sub-Committee (South and West)",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Beamish Joint Committee",
+        "Charter Trustees for the City of Durham",
+        "County Council",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Joint General Licensing and Registration and Statutory Licensing Committee",
+        "Pension Fund Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Paul Bean": {
+    "Councillor": {
+      "Name": "Councillor Paul Bean",
+      "UID": "28179",
+      "Committees": [
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Highways Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Alan Bell": {
+    "Councillor": {
+      "Name": "Councillor Alan Bell",
+      "UID": "190",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (North)",
+        "Charter Trustees for the City of Durham",
+        "Combined Fire Authority for County Durham and Darlington",
+        "County Council",
+        "County Council",
+        "County Planning Committee",
+        "County Planning Committee",
+        "Highways Committee",
+        "Police and Crime Panel",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Richard Bell": {
+    "Councillor": {
+      "Name": "Councillor Richard Bell",
+      "UID": "193",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Beamish Joint Committee",
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "Chief Officer Appointments Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington Audit and Finance Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Council",
+        "Durham Darlington and Teesside, Hambleton, Richmondshire and Whitby STP Joint Health Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Health and Wellbeing Board",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Overview and Scrutiny Management Board",
+        "Overview and Scrutiny Management Board",
+        "Review of Stroke Rehabilitation Services in County Durham and Darlington and the future of Inpatient Rehabilitation services (Ward 6) Bishop Auckland Hospital - Joint Health Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Dawn Bellingham": {
+    "Councillor": {
+      "Name": "Councillor Dawn Bellingham",
+      "UID": "28148",
+      "Committees": [
+        "County Council",
+        "County Planning Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Steve Biggs": {
+    "Councillor": {
+      "Name": "Councillor Steve Biggs",
+      "UID": "28162",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Corporate Parenting Panel",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Jan Blakey": {
+    "Councillor": {
+      "Name": "Councillor Jan Blakey",
+      "UID": "194",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Appeals and Complaints Committee",
+        "Area General Licensing and Registration Sub-Committee (North Durham)",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Beamish Joint Committee",
+        "Beamish Joint Committee",
+        "Central Durham Crematorium Joint Committee",
+        "Central Durham Crematorium Joint Committee",
+        "Charter Trustees for the City of Durham",
+        "Charter Trustees for the City of Durham",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Combined Fire Authority for County Durham and Darlington Audit and Finance Committee",
+        "Combined Fire Authority for County Durham and Darlington Performance Committee",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Council",
+        "Durham Darlington and Teesside, Hambleton, Richmondshire and Whitby STP Joint Health Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "Joint General Licensing and Registration and Statutory Licensing Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Overview and Scrutiny Management Board",
+        "Overview and Scrutiny Management Board",
+        "Overview and Scrutiny Management Board",
+        "Standing Advisory Council on Religious Education (SACRE)",
+        "Standing Advisory Council on Religious Education (SACRE)",
+        "Statutory Licensing Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Christine Blatchford": {
+    "Councillor": {
+      "Name": "Councillor Christine Blatchford",
+      "UID": "28144",
+      "Committees": [
+        "Area Planning Committee (North)",
+        "Audit Committee",
+        "County Council",
+        "General Licensing and Registration Committee"
+      ]
+    }
+  },
+  "Councillor Stephen Bowron": {
+    "Councillor": {
+      "Name": "Councillor Stephen Bowron",
+      "UID": "28174",
+      "Committees": [
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Howard Brown": {
+    "Councillor": {
+      "Name": "Councillor Howard Brown",
+      "UID": "28135",
+      "Committees": [
+        "Cabinet",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Liz Brown": {
+    "Councillor": {
+      "Name": "Councillor Liz Brown",
+      "UID": "4036",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Area Planning Committee (South and West)",
+        "Area Planning Committee (South and West)",
+        "Area Planning Committee (South and West)",
+        "Charter Trustees for the City of Durham",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Police and Crime Panel",
+        "Review of Stroke Rehabilitation Services in County Durham and Darlington and the future of Inpatient Rehabilitation services (Ward 6) Bishop Auckland Hospital - Joint Health Scrutiny Committee",
+        "Statutory Licensing Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Nicole Brown": {
+    "Councillor": {
+      "Name": "Councillor Nicole Brown",
+      "UID": "28128",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Nick Brown": {
+    "Councillor": {
+      "Name": "Councillor Nick Brown",
+      "UID": "28168",
+      "Committees": [
+        "Area Planning Committee (South and West)",
+        "Audit Committee",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Gavin Brydon": {
+    "Councillor": {
+      "Name": "Councillor Gavin Brydon",
+      "UID": "28129",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Matt Burnard": {
+    "Councillor": {
+      "Name": "Councillor Matt Burnard",
+      "UID": "28121",
+      "Committees": [
+        "Area Planning Committee (North)",
+        "Charter Trustees for the City of Durham",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Rhys Burriss": {
+    "Councillor": {
+      "Name": "Councillor Rhys Burriss",
+      "UID": "28119",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "Charter Trustees for the City of Durham",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Jillian Campbell": {
+    "Councillor": {
+      "Name": "Councillor Jillian Campbell",
+      "UID": "28154",
+      "Committees": [
+        "Area Planning Committee (North)",
+        "County Council",
+        "County Planning Committee"
+      ]
+    }
+  },
+  "Councillor Ian Catchpole": {
+    "Councillor": {
+      "Name": "Councillor Ian Catchpole",
+      "UID": "28134",
+      "Committees": [
+        "Area Planning Committee (South and West)",
+        "Audit Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor John Cook": {
+    "Councillor": {
+      "Name": "Councillor John Cook",
+      "UID": "28175",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor John Cottier": {
+    "Councillor": {
+      "Name": "Councillor John Cottier",
+      "UID": "28151",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Neil Craggs": {
+    "Councillor": {
+      "Name": "Councillor Neil Craggs",
+      "UID": "28149",
+      "Committees": [
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Ian Cross": {
+    "Councillor": {
+      "Name": "Councillor Ian Cross",
+      "UID": "28164",
+      "Committees": [
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Standing Advisory Council on Religious Education (SACRE)"
+      ]
+    }
+  },
+  "Councillor Rob Crute": {
+    "Councillor": {
+      "Name": "Councillor Rob Crute",
+      "UID": "133",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Chief Officer Appointments Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Overview and Scrutiny Management Board",
+        "Review of Stroke Rehabilitation Services in County Durham and Darlington and the future of Inpatient Rehabilitation services (Ward 6) Bishop Auckland Hospital - Joint Health Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor David Cumming": {
+    "Councillor": {
+      "Name": "Councillor David Cumming",
+      "UID": "28159",
+      "Committees": [
+        "Area Planning Committee (South and West)",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Highways Committee"
+      ]
+    }
+  },
+  "Councillor Andrew Eales": {
+    "Councillor": {
+      "Name": "Councillor Andrew Eales",
+      "UID": "28132",
+      "Committees": [
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Jonathan Elmer": {
+    "Councillor": {
+      "Name": "Councillor Jonathan Elmer",
+      "UID": "8049",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (Central and East)",
+        "Charter Trustees for the City of Durham",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Planning Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Priscilla Elmer": {
+    "Councillor": {
+      "Name": "Councillor Priscilla Elmer",
+      "UID": "28169",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Charter Trustees for the City of Durham",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Chris Fairs": {
+    "Councillor": {
+      "Name": "Councillor Chris Fairs",
+      "UID": "28127",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Chris Foote-Wood": {
+    "Councillor": {
+      "Name": "Councillor Chris Foote-Wood",
+      "UID": "28142",
+      "Committees": [
+        "Corporate Parenting Panel",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Jasmine Fox": {
+    "Councillor": {
+      "Name": "Councillor Jasmine Fox",
+      "UID": "28157",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (South and West)",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Lyndsey Fox": {
+    "Councillor": {
+      "Name": "Councillor Lyndsey Fox",
+      "UID": "28155",
+      "Committees": [
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Mary-Lynn Franklin": {
+    "Councillor": {
+      "Name": "Councillor Mary-Lynn Franklin",
+      "UID": "28156",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Charter Trustees for the City of Durham",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Planning Committee"
+      ]
+    }
+  },
+  "Councillor Steven Franklin": {
+    "Councillor": {
+      "Name": "Councillor Steven Franklin",
+      "UID": "28116",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "County Council",
+        "County Planning Committee",
+        "General Licensing and Registration Committee",
+        "Standing Advisory Council on Religious Education (SACRE)",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor David Freeman": {
+    "Councillor": {
+      "Name": "Councillor David Freeman",
+      "UID": "211",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (Central and East)",
+        "Charter Trustees for the City of Durham",
+        "Charter Trustees for the City of Durham",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Council",
+        "County Planning Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Pension Fund Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Kyle Genner": {
+    "Councillor": {
+      "Name": "Councillor Kyle Genner",
+      "UID": "28166",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area Planning Committee (South and West)",
+        "Charter Trustees for the City of Durham",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Parenting Panel",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor John Grant": {
+    "Councillor": {
+      "Name": "Councillor John Grant",
+      "UID": "28136",
+      "Committees": [
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Highways Committee"
+      ]
+    }
+  },
+  "Councillor Alison Gray": {
+    "Councillor": {
+      "Name": "Councillor Alison Gray",
+      "UID": "28152",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Stephen Gray": {
+    "Councillor": {
+      "Name": "Councillor Stephen Gray",
+      "UID": "28170",
+      "Committees": [
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Darren Grimes": {
+    "Councillor": {
+      "Name": "Councillor Darren Grimes",
+      "UID": "28114",
+      "Committees": [
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Sandra Grindle": {
+    "Councillor": {
+      "Name": "Councillor Sandra Grindle",
+      "UID": "28146",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Parenting Panel",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Dominic Haney": {
+    "Councillor": {
+      "Name": "Councillor Dominic Haney",
+      "UID": "8078",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (North)",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Standing Advisory Council on Religious Education (SACRE)"
+      ]
+    }
+  },
+  "Councillor Andrew Harrison": {
+    "Councillor": {
+      "Name": "Councillor Andrew Harrison",
+      "UID": "28131",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Sean Healy": {
+    "Councillor": {
+      "Name": "Councillor Sean Healy",
+      "UID": "28123",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (Central and East)",
+        "Charter Trustees for the City of Durham",
+        "Corporate Parenting Panel",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Phil Heaviside": {
+    "Councillor": {
+      "Name": "Councillor Phil Heaviside",
+      "UID": "8050",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Audit Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Highways Committee",
+        "Mountsett Crematorium Joint Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Aaron Hillam": {
+    "Councillor": {
+      "Name": "Councillor Aaron Hillam",
+      "UID": "28176",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Kenny Hope": {
+    "Councillor": {
+      "Name": "Councillor Kenny Hope",
+      "UID": "28125",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area Planning Committee (North)",
+        "Audit Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Planning Committee"
+      ]
+    }
+  },
+  "Councillor Amanda Hopgood": {
+    "Councillor": {
+      "Name": "Councillor Amanda Hopgood",
+      "UID": "220",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Cabinet",
+        "Central Durham Crematorium Joint Committee",
+        "Central Durham Crematorium Joint Committee",
+        "Charter Trustees for the City of Durham",
+        "Charter Trustees for the City of Durham",
+        "Chief Officer Appointments Committee",
+        "Chief Officer Appointments Committee",
+        "Chief Officer Appointments Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "Joint General Licensing and Registration and Statutory Licensing Committee",
+        "Local Pension Board",
+        "Overview and Scrutiny Management Board",
+        "Overview and Scrutiny Management Board",
+        "Pension Fund Committee",
+        "Police and Crime Panel",
+        "Statutory Licensing Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Ellie Hopgood": {
+    "Councillor": {
+      "Name": "Councillor Ellie Hopgood",
+      "UID": "28141",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Charter Trustees for the City of Durham",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Cathy Hunt": {
+    "Councillor": {
+      "Name": "Councillor Cathy Hunt",
+      "UID": "8048",
+      "Committees": [
+        "Cabinet",
+        "Charter Trustees for the City of Durham",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Planning Committee",
+        "General Licensing and Registration Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Emma Hunt": {
+    "Councillor": {
+      "Name": "Councillor Emma Hunt",
+      "UID": "28173",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Corporate Parenting Panel",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Andrew Husband": {
+    "Councillor": {
+      "Name": "Councillor Andrew Husband",
+      "UID": "28172",
+      "Committees": [
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Susan Husband": {
+    "Councillor": {
+      "Name": "Councillor Susan Husband",
+      "UID": "28160",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Gary Hutchinson": {
+    "Councillor": {
+      "Name": "Councillor Gary Hutchinson",
+      "UID": "8047",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Charter Trustees for the City of Durham",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "Highways Committee",
+        "Highways Committee"
+      ]
+    }
+  },
+  "Councillor John Kinvig": {
+    "Councillor": {
+      "Name": "Councillor John Kinvig",
+      "UID": "28158",
+      "Committees": [
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Chris Lines": {
+    "Councillor": {
+      "Name": "Councillor Chris Lines",
+      "UID": "8038",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Nicola Lyons": {
+    "Councillor": {
+      "Name": "Councillor Nicola Lyons",
+      "UID": "28165",
+      "Committees": [
+        "Cabinet",
+        "Charter Trustees for the City of Durham",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Liz Maddison": {
+    "Councillor": {
+      "Name": "Councillor Liz Maddison",
+      "UID": "4054",
+      "Committees": [
+        "All Together for Spennymoor",
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (South and West)",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Planning Committee",
+        "County Planning Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Highways Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Craig Marshall": {
+    "Councillor": {
+      "Name": "Councillor Craig Marshall",
+      "UID": "28130",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Craig Martin": {
+    "Councillor": {
+      "Name": "Councillor Craig Martin",
+      "UID": "5075",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Audit Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington Human Resources Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Planning Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Pension Fund Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Standing Advisory Council on Religious Education (SACRE)"
+      ]
+    }
+  },
+  "Councillor Eric Mavin": {
+    "Councillor": {
+      "Name": "Councillor Eric Mavin",
+      "UID": "4048",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (Central and East)",
+        "Charter Trustees for the City of Durham",
+        "County Council",
+        "Highways Committee",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Lesley Mavin": {
+    "Councillor": {
+      "Name": "Councillor Lesley Mavin",
+      "UID": "4049",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Charter Trustees for the City of Durham",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington Appeals Committee",
+        "Combined Fire Authority for County Durham and Darlington Audit and Finance Committee",
+        "Combined Fire Authority for County Durham and Darlington Human Resources Committee",
+        "Corporate Parenting Panel",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "General Licensing and Registration Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Standards Committee",
+        "Standards Committee Hearing Panel",
+        "Statutory Licensing Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Billy McAloon": {
+    "Councillor": {
+      "Name": "Councillor Billy McAloon",
+      "UID": "8035",
+      "Committees": [
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Jack McGlenen": {
+    "Councillor": {
+      "Name": "Councillor Jack McGlenen",
+      "UID": "28118",
+      "Committees": [
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Parenting Panel",
+        "County Council",
+        "General Licensing and Registration Committee"
+      ]
+    }
+  },
+  "Councillor Tim McGuinness": {
+    "Councillor": {
+      "Name": "Councillor Tim McGuinness",
+      "UID": "28120",
+      "Committees": [
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Bill Moist": {
+    "Councillor": {
+      "Name": "Councillor Bill Moist",
+      "UID": "8034",
+      "Committees": [
+        "Area Planning Committee (North)",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Planning Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Highways Committee"
+      ]
+    }
+  },
+  "Councillor Pete Molloy": {
+    "Councillor": {
+      "Name": "Councillor Pete Molloy",
+      "UID": "8039",
+      "Committees": [
+        "County Council",
+        "County Planning Committee"
+      ]
+    }
+  },
+  "Councillor Paul Mountford": {
+    "Councillor": {
+      "Name": "Councillor Paul Mountford",
+      "UID": "28143",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (South and West)",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Alex Neil": {
+    "Councillor": {
+      "Name": "Councillor Alex Neil",
+      "UID": "28153",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (North)",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Elizabeth Pears": {
+    "Councillor": {
+      "Name": "Councillor Elizabeth Pears",
+      "UID": "28147",
+      "Committees": [
+        "Charter Trustees for the City of Durham",
+        "Corporate Parenting Panel",
+        "County Council",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Standing Advisory Council on Religious Education (SACRE)"
+      ]
+    }
+  },
+  "Councillor James Pickard": {
+    "Councillor": {
+      "Name": "Councillor James Pickard",
+      "UID": "28122",
+      "Committees": [
+        "Area Planning Committee (North)",
+        "Charter Trustees for the City of Durham",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Robert Potts": {
+    "Councillor": {
+      "Name": "Councillor Robert Potts",
+      "UID": "8074",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Police and Crime Panel",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Joe Quinn": {
+    "Councillor": {
+      "Name": "Councillor Joe Quinn",
+      "UID": "8043",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington Human Resources Committee",
+        "Combined Fire Authority for County Durham and Darlington Performance Committee",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Pension Fund Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Brian Quirey": {
+    "Councillor": {
+      "Name": "Councillor Brian Quirey",
+      "UID": "28167",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Michael Ramage": {
+    "Councillor": {
+      "Name": "Councillor Michael Ramage",
+      "UID": "28137",
+      "Committees": [
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Tom Redmond": {
+    "Councillor": {
+      "Name": "Councillor Tom Redmond",
+      "UID": "28163",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Appeals and Complaints Committee",
+        "Audit Committee",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Tim Robson": {
+    "Councillor": {
+      "Name": "Councillor Tim Robson",
+      "UID": "28124",
+      "Committees": [
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Robbie Rodiss": {
+    "Councillor": {
+      "Name": "Councillor Robbie Rodiss",
+      "UID": "28178",
+      "Committees": [
+        "Charter Trustees for the City of Durham",
+        "County Council"
+      ]
+    }
+  },
+  "Councillor Kathryn Rooney": {
+    "Councillor": {
+      "Name": "Councillor Kathryn Rooney",
+      "UID": "8076",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington Performance Committee",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "County Council",
+        "Mountsett Crematorium Joint Committee",
+        "Standards Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Kate Rowland": {
+    "Councillor": {
+      "Name": "Councillor Kate Rowland",
+      "UID": "28138",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "County Council",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Mark Rowney": {
+    "Councillor": {
+      "Name": "Councillor Mark Rowney",
+      "UID": "28161",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Dawn Saunders": {
+    "Councillor": {
+      "Name": "Councillor Dawn Saunders",
+      "UID": "28117",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "County Council",
+        "General Licensing and Registration Committee",
+        "Statutory Licensing Committee"
+      ]
+    }
+  },
+  "Councillor Anita Savory": {
+    "Councillor": {
+      "Name": "Councillor Anita Savory",
+      "UID": "164",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Area Planning Committee (South and West)",
+        "Area Planning Committee (South and West)",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "Corporate Parenting Panel",
+        "County Council",
+        "County Council",
+        "County Planning Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Police and Crime Panel",
+        "Review of Stroke Rehabilitation Services in County Durham and Darlington and the future of Inpatient Rehabilitation services (Ward 6) Bishop Auckland Hospital - Joint Health Scrutiny Committee",
+        "Standards Committee",
+        "Standards Committee",
+        "Standards Committee Hearing Panel"
+      ]
+    }
+  },
+  "Councillor Adrian Schulman": {
+    "Councillor": {
+      "Name": "Councillor Adrian Schulman",
+      "UID": "28177",
+      "Committees": [
+        "Area Planning Committee (South and West)",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Planning Committee",
+        "Highways Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Elizabeth Scott": {
+    "Councillor": {
+      "Name": "Councillor Elizabeth Scott",
+      "UID": "4037",
+      "Committees": [
+        "All Together for Spennymoor",
+        "Bishop Auckland Stronger Town Board",
+        "Cabinet",
+        "Charter Trustees for the City of Durham",
+        "Chief Officer Appointments Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Safer and Stronger Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor Paul Sexton": {
+    "Councillor": {
+      "Name": "Councillor Paul Sexton",
+      "UID": "5073",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Appeals and Complaints Committee",
+        "Appeals and Complaints Committee",
+        "Cabinet",
+        "Chief Officer Appointments Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Health and Wellbeing Board",
+        "Highways Committee",
+        "Oral Health - Joint Adults, Wellbeing and Health, Children and Young People's and Environment and Sustainable Communities Overview and Scrutiny Committee"
+      ]
+    }
+  },
+  "Councillor John Shuttleworth": {
+    "Councillor": {
+      "Name": "Councillor John Shuttleworth",
+      "UID": "171",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (North)",
+        "Area Planning Committee (South and West)",
+        "Area Planning Committee (South and West)",
+        "Audit Committee",
+        "Audit Committee",
+        "Beamish Joint Committee",
+        "Beamish Joint Committee",
+        "Cabinet",
+        "Central Durham Crematorium Joint Committee",
+        "Chief Officer Appointments Committee",
+        "Chief Officer Appointments Committee",
+        "Chief Officer Appointments Committee",
+        "Chief Officer Appointments Committee",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington",
+        "Combined Fire Authority for County Durham and Darlington Appeals Committee",
+        "County Council",
+        "County Council",
+        "County Planning Committee",
+        "County Planning Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "General Licensing and Registration Committee",
+        "Highways Committee",
+        "Mountsett Crematorium Joint Committee",
+        "Pension Fund Committee",
+        "Standing Advisory Council on Religious Education (SACRE)"
+      ]
+    }
+  },
+  "Councillor Saffron Sims-Brydon": {
+    "Councillor": {
+      "Name": "Councillor Saffron Sims-Brydon",
+      "UID": "28133",
+      "Committees": [
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Parenting Panel",
+        "County Council",
+        "Highways Committee"
+      ]
+    }
+  },
+  "Councillor Tracie Smith": {
+    "Councillor": {
+      "Name": "Councillor Tracie Smith",
+      "UID": "2247",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Audit Committee",
+        "Audit Committee",
+        "Corporate Issues Overview and Scrutiny Committee",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Highways Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Michael Stead": {
+    "Councillor": {
+      "Name": "Councillor Michael Stead",
+      "UID": "8054",
+      "Committees": [
+        "Area Planning Committee (South and West)",
+        "Area Planning Committee (South and West)",
+        "Central Durham Crematorium Joint Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Pension Fund Committee"
+      ]
+    }
+  },
+  "Councillor James Stephenson": {
+    "Councillor": {
+      "Name": "Councillor James Stephenson",
+      "UID": "28140",
+      "Committees": [
+        "County Council",
+        "County Planning Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Highways Committee"
+      ]
+    }
+  },
+  "Councillor Louise Taylor": {
+    "Councillor": {
+      "Name": "Councillor Louise Taylor",
+      "UID": "28139",
+      "Committees": [
+        "Adults, Wellbeing and Health Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Standards Committee"
+      ]
+    }
+  },
+  "Councillor Jackie Teasdale": {
+    "Councillor": {
+      "Name": "Councillor Jackie Teasdale",
+      "UID": "28126",
+      "Committees": [
+        "County Council"
+      ]
+    }
+  },
+  "Councillor David Walton": {
+    "Councillor": {
+      "Name": "Councillor David Walton",
+      "UID": "28145",
+      "Committees": [
+        "Appeals and Complaints Committee",
+        "Area Planning Committee (North)",
+        "Children and Young People's Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Parenting Panel",
+        "County Council",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Standing Advisory Council on Religious Education (SACRE)"
+      ]
+    }
+  },
+  "Councillor Mark Wilkes": {
+    "Councillor": {
+      "Name": "Councillor Mark Wilkes",
+      "UID": "134",
+      "Committees": [
+        "Area Planning Committee (Central and East)",
+        "Area Planning Committee (South and West)",
+        "Cabinet",
+        "Charter Trustees for the City of Durham",
+        "Charter Trustees for the City of Durham",
+        "Corporate Issues Overview and Scrutiny Committee",
+        "Corporate Issues Overview and Scrutiny Committee",
+        "Corporate Overview and Scrutiny Management Board",
+        "Corporate Overview and Scrutiny Management Board",
+        "County Council",
+        "County Council",
+        "County Planning Committee",
+        "County Planning Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Economy and Enterprise Overview and Scrutiny Committee",
+        "Environment and Sustainable Communities Overview and Scrutiny Committee",
+        "Overview and Scrutiny Management Board"
+      ]
+    }
+  },
+  "Councillor Scott Woodhouse": {
+    "Councillor": {
+      "Name": "Councillor Scott Woodhouse",
+      "UID": "28171",
+      "Committees": [
+        "County Council",
+        "County Planning Committee",
+        "Highways Committee"
+      ]
+    }
+  }
+}
