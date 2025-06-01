@@ -1,11 +1,6 @@
 import * as cheerio from 'cheerio';
 import * as fs from 'fs/promises';
 
-// prettier-ignore
-import councils from './councils.json' with { type: 'json' };
-
-// baseUrl eg https://council.lancashire.gov.uk/
-
 const getCouncillorsPage = async (councilName, baseUrl) => {
     const memberListUrl = 'mgMemberIndex.aspx?VW=TABLE&PIC=1';
 
@@ -24,7 +19,7 @@ const getCouncillorsPage = async (councilName, baseUrl) => {
     } catch (error) {
         console.error(
             `Error fetching councillor page for ${councilName}:`,
-            error,
+            error
         );
         return null;
     }
@@ -34,7 +29,7 @@ const getAttendancePage = async (
     councilName,
     baseUrl,
     startDate = { day: 1, month: 5, year: 2025 },
-    endDate = { day: 31, month: 12, year: 2040 },
+    endDate = { day: 31, month: 12, year: 2040 }
 ) => {
     const attendanceUrl = 'mgUserAttendanceSummary.aspx';
 
@@ -55,7 +50,7 @@ const getAttendancePage = async (
     } catch (error) {
         console.error(
             `Error fetching councillor page for ${councilName}:`,
-            error,
+            error
         );
         return null;
     }
@@ -65,7 +60,7 @@ const getReformCouncillorUrls = (councillorsPageHtml) => {
     const $ = cheerio.load(councillorsPageHtml);
 
     const $councillorRows = $(
-        '.mgContent:first > table:first > tbody:first > tr',
+        '.mgContent:first > table:first > tbody:first > tr'
     );
 
     const $reformCouncillorRows = $councillorRows.filter((i, el) => {
@@ -120,7 +115,7 @@ const collectReformAttendanceData = async (
     councilName,
     baseUrl,
     startDate = { day: 1, month: 5, year: 2025 },
-    endDate = { day: 31, month: 12, year: 2040 },
+    endDate = { day: 31, month: 12, year: 2040 }
 ) => {
     const councillorsHtml = await getCouncillorsPage(councilName, baseUrl);
     const reformUIDs = getReformCouncillorUrls(councillorsHtml);
@@ -129,7 +124,7 @@ const collectReformAttendanceData = async (
         councilName,
         baseUrl,
         startDate,
-        endDate,
+        endDate
     );
     const attendanceData = getReformAttendanceData(attendanceHtml, reformUIDs);
 
@@ -137,11 +132,14 @@ const collectReformAttendanceData = async (
 };
 
 const main = async () => {
+    const jsonCouncils = await fs.readFile('./councils.json');
+    const councils = JSON.parse(jsonCouncils);
+
     for (let { fileName, councilName, baseUrl } of councils) {
         try {
             const data = await collectReformAttendanceData(
                 councilName,
-                baseUrl,
+                baseUrl
             );
             const obj = { councilName, reformAttendanceData: data };
             const jsonStr = JSON.stringify(obj);
