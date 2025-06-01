@@ -1,6 +1,9 @@
 import * as cheerio from 'cheerio';
 import * as fs from 'fs/promises';
 
+// prettier-ignore
+import councils from './councils.json' with { type: 'json' };
+
 // baseUrl eg https://council.lancashire.gov.uk/
 
 const getCouncillorsPage = async (councilName, baseUrl) => {
@@ -67,7 +70,7 @@ const getReformCouncillorUrls = (councillorsPageHtml) => {
 
     const $reformCouncillorRows = $councillorRows.filter((i, el) => {
         const partyCol = $(el).children('td')[2];
-        return $(partyCol).text().slice(0, 9) === 'Reform UK';
+        return $(partyCol).text().slice(0, 9) === 'Reform UK'; // If someone wants to add more parties to this modify this line
     });
 
     let UIDs = [];
@@ -134,13 +137,20 @@ const collectReformAttendanceData = async (
 };
 
 const main = async () => {
-    const lancsData = await collectReformAttendanceData(
-        'Lancashire County Council',
-        'https://council.lancashire.gov.uk/',
-    );
-
-    const jsonStr = JSON.stringify(lancsData);
-    await fs.writeFile('./out/lancsData.json', jsonStr);
+    for (let { fileName, councilName, baseUrl } of councils) {
+        try {
+            const data = await collectReformAttendanceData(
+                councilName,
+                baseUrl,
+            );
+            const obj = { councilName, reformAttendanceData: data };
+            const jsonStr = JSON.stringify(obj);
+            await fs.writeFile(`./out/${fileName}Data.json`, jsonStr);
+        } catch (err) {
+            console.log(`${councilName} didnt work`);
+            console.error(err);
+        }
+    }
 };
 
 main();

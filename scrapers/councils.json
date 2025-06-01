@@ -1,0 +1,57 @@
+[
+    {
+        "fileName": "lancashire",
+        "councilName": "Lancashire County Council",
+        "baseUrl": "https://council.lancashire.gov.uk/"
+    },
+    {
+        "fileName": "derbyshire",
+        "councilName": "Derbyshire County Council",
+        "baseUrl": "https://democracy.derbyshire.gov.uk/"
+    },
+    {
+        "fileName": "kent",
+        "councilName": "Kent County Council",
+        "baseUrl": "https://democracy.kent.gov.uk/"
+    },
+    {
+        "fileName": "warwickshire",
+        "councilName": "Warwickshire County Council",
+        "baseUrl": "https://democracy.warwickshire.gov.uk/"
+    },
+    {
+        "fileName": "worcestershire",
+        "councilName": "Worcestershire County Council",
+        "baseUrl": "https://worcestershire.moderngov.co.uk/"
+    },
+    {
+        "fileName": "cornwall",
+        "councilName": "Cornwall County Council",
+        "baseUrl": "https://democracy.cornwall.gov.uk/"
+    },
+    {
+        "fileName": "northNorthamptonshire",
+        "councilName": "North Northamptonshire Council",
+        "baseUrl": "https://northnorthants.moderngov.co.uk/"
+    },
+    {
+        "fileName": "northumberland",
+        "councilName": "Northumberland County Council",
+        "baseUrl": "https://northumberland.moderngov.co.uk/"
+    },
+    {
+        "fileName": "shropshire",
+        "councilName": "Shropshire County Council",
+        "baseUrl": "https://shropshire.gov.uk/committee-services/"
+    },
+    {
+        "fileName": "westNorthamptonshire",
+        "councilName": "West Northamptonshire Council",
+        "baseUrl": "https://westnorthants.moderngov.co.uk/"
+    },
+    {
+        "fileName": "wiltshire",
+        "councilName": "Wiltshire County Council",
+        "baseUrl": "https://cms.wiltshire.gov.uk/"
+    }
+]
