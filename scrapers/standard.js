@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio';
 // baseUrl eg https://council.lancashire.gov.uk/
 
 const getCouncillorsPage = async (councilName, baseUrl) => {
-    const memberListUrl = 'mgMemberIndex.aspx?VW=TABLE&PIC=1&FN=';
+    const memberListUrl = 'mgMemberIndex.aspx?VW=TABLE&PIC=1';
 
     try {
         const response = await fetch(baseUrl + memberListUrl, {
