@@ -26,7 +26,7 @@ const getCouncillorsPage = async (councilName, baseUrl) => {
     }
 };
 
-const getReformCouncillors = (councillorsPageHtml) => {
+const getReformCouncillorUrls = (councillorsPageHtml) => {
     const $ = cheerio.load(councillorsPageHtml);
     const $councillorRows = $(
         '.mgContent:first > table:first > tbody:first > tr',
@@ -51,7 +51,7 @@ const main = async () => {
         'Lancashire',
         'https://council.lancashire.gov.uk/',
     );
-    const reformUIDs = getReformCouncillors(lancsCouncillorsHtml);
+    const reformUIDs = getReformCouncillorUrls(lancsCouncillorsHtml);
 };
 
 main();
