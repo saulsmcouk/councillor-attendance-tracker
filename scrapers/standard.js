@@ -1,4 +1,5 @@
 import * as cheerio from 'cheerio';
+import * as fs from 'fs/promises';
 
 // baseUrl eg https://council.lancashire.gov.uk/
 
@@ -112,21 +113,34 @@ const getReformAttendanceData = (attendanceHtml, UIDs) => {
     return data;
 };
 
-const main = async () => {
-    const lancsCouncillorsHtml = await getCouncillorsPage(
-        'Lancashire',
-        'https://council.lancashire.gov.uk/',
-    );
-    const reformUIDs = getReformCouncillorUrls(lancsCouncillorsHtml);
+const collectReformAttendanceData = async (
+    councilName,
+    baseUrl,
+    startDate = { day: 1, month: 5, year: 2025 },
+    endDate = { day: 31, month: 12, year: 2040 },
+) => {
+    const councillorsHtml = await getCouncillorsPage(councilName, baseUrl);
+    const reformUIDs = getReformCouncillorUrls(councillorsHtml);
 
-    const lancsAttendanceHtml = await getAttendancePage(
-        'Lancashire',
+    const attendanceHtml = await getAttendancePage(
+        councilName,
+        baseUrl,
+        startDate,
+        endDate,
+    );
+    const attendanceData = getReformAttendanceData(attendanceHtml, reformUIDs);
+
+    return attendanceData;
+};
+
+const main = async () => {
+    const lancsData = await collectReformAttendanceData(
+        'Lancashire County Council',
         'https://council.lancashire.gov.uk/',
     );
-    const attendanceData = getReformAttendanceData(
-        lancsAttendanceHtml,
-        reformUIDs,
-    );
+
+    const jsonStr = JSON.stringify(lancsData);
+    await fs.writeFile('./out/lancsData.json', jsonStr);
 };
 
 main();
