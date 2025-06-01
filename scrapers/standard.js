@@ -26,15 +26,49 @@ const getCouncillorsPage = async (councilName, baseUrl) => {
     }
 };
 
+const getAttendancePage = async (
+    councilName,
+    baseUrl,
+    startDate = { day: 1, month: 5, year: 2025 },
+    endDate = { day: 31, month: 12, year: 2040 },
+) => {
+    const attendanceUrl = 'mgUserAttendanceSummary.aspx';
+
+    let params = `?XXR=0&DR=${startDate.day}%2f${startDate.month}%2f${startDate.year}-${endDate.day}%2f${endDate.month}%2f${endDate.year}`;
+
+    try {
+        const response = await fetch(baseUrl + attendanceUrl + params, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'text/html',
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const html = await response.text();
+        return html; // Returning the raw HTML string
+    } catch (error) {
+        console.error(
+            `Error fetching councillor page for ${councilName}:`,
+            error,
+        );
+        return null;
+    }
+};
+
 const getReformCouncillorUrls = (councillorsPageHtml) => {
     const $ = cheerio.load(councillorsPageHtml);
+
     const $councillorRows = $(
         '.mgContent:first > table:first > tbody:first > tr',
     );
+
     const $reformCouncillorRows = $councillorRows.filter((i, el) => {
         const partyCol = $(el).children('td')[2];
         return $(partyCol).text().slice(0, 9) === 'Reform UK';
     });
+
     let UIDs = [];
     $reformCouncillorRows.each((i, el) => {
         const infoCol = $(el).children('td')[1];
@@ -43,7 +77,39 @@ const getReformCouncillorUrls = (councillorsPageHtml) => {
             .slice(20);
         UIDs.push(uid);
     });
+
     return UIDs;
+};
+
+const getReformAttendanceData = (attendanceHtml, UIDs) => {
+    const $ = cheerio.load(attendanceHtml);
+
+    const $rows = $('.mgContent:first > table:first > tbody:first > tr');
+
+    const $reformRows = $rows.filter((i, el) => {
+        const councillorCol = $(el).children('td')[0];
+        const councillorUrl = $($(councillorCol).children('a')[0]).attr('href');
+        const params = councillorUrl.slice(22);
+        const uid = params.split('&')[0];
+        return UIDs.includes(uid);
+    });
+
+    let data = []; // {uid: str, name: str, expected: int, present: int}
+    $reformRows.each((i, el) => {
+        const children = $(el).children('td');
+
+        const councillorCol = children[0];
+        const councillorUrl = $($(councillorCol).children('a')[0]).attr('href');
+        const params = councillorUrl.slice(22);
+
+        const uid = params.split('&')[0];
+        const name = $($(councillorCol).children('a')[0]).text();
+        const expected = parseInt($(children[1]).text());
+        const present = parseInt($(children[2]).text());
+
+        data.push({ uid, name, expected, present });
+    });
+    return data;
 };
 
 const main = async () => {
@@ -52,6 +118,15 @@ const main = async () => {
         'https://council.lancashire.gov.uk/',
     );
     const reformUIDs = getReformCouncillorUrls(lancsCouncillorsHtml);
+
+    const lancsAttendanceHtml = await getAttendancePage(
+        'Lancashire',
+        'https://council.lancashire.gov.uk/',
+    );
+    const attendanceData = getReformAttendanceData(
+        lancsAttendanceHtml,
+        reformUIDs,
+    );
 };
 
 main();
