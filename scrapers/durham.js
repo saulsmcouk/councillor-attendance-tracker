@@ -44,7 +44,7 @@ async function getCommittees(committeesUrl) {
     return committees;
 }
 
-async function scrapeMeetingLinks(baseUrl, paginate = true) {
+async function scrapeMeetingLinks(baseUrl, councilURL, paginate = true) {
     const allMeetingPageUrls = new Set();
     let currentUrl = baseUrl;
     let pageCount = 0;
@@ -64,7 +64,7 @@ async function scrapeMeetingLinks(baseUrl, paginate = true) {
         $('li.mgTableOddRow > a:nth-child(1), li.mgTableEvenRow > a:nth-child(1)').each((i, el) => {
             const href = $(el).attr('href');
             if (href) {
-                allMeetingPageUrls.add(new URL(href, 'https://democracy.durham.gov.uk/').toString());
+                allMeetingPageUrls.add(new URL(href, councilURL).toString());
             }
         });
 
@@ -75,7 +75,7 @@ async function scrapeMeetingLinks(baseUrl, paginate = true) {
             }).attr('href');
 
             if (earlierLink) {
-                currentUrl = new URL(earlierLink, 'https://democracy.durham.gov.uk/').toString();
+                currentUrl = new URL(earlierLink, councilURL).toString();
                 console.log(`Found "Earlier meetings" link, navigating to: ${currentUrl}`);
             } else {
                 console.log('No "Earlier meetings" link found on this page.');
@@ -149,9 +149,12 @@ async function downloadMinutes(meetingPageUrl, committeeName) {
     }
 }
 
-async function main() {
+async function getMinutesForCouncil(councilURL) {
+    // Ensure councilURL doesn't have trailing slash
+    const baseURL = councilURL.endsWith('/') ? councilURL.slice(0, -1) : councilURL;
+    
     const allCommitteesMeetingData = {};
-    const committeeListUrl = "https://democracy.durham.gov.uk/mgListCommittees.aspx?bcr=1";
+    const committeeListUrl = `${baseURL}/mgListCommittees.aspx?bcr=1`;
     const shouldPaginate = false;
     const processOnlyFirstCommittee = true; // Development flag
 
@@ -160,7 +163,7 @@ async function main() {
         await mkdir('minutes');
     }
 
-    console.log(`--- Fetching Committee Information (Pagination: ${shouldPaginate}) ---`);
+    console.log(`--- Fetching Committee Information from ${baseURL} (Pagination: ${shouldPaginate}) ---`);
     const committees = await getCommittees(committeeListUrl);
 
     if (committees.length > 0) {
@@ -172,8 +175,8 @@ async function main() {
             let meetingPageUrls = [];
 
             if (committeeId) {
-                const meetingsBaseUrl = `https://democracy.durham.gov.uk/ieListMeetings.aspx?CommitteeId=${committeeId}`;
-                meetingPageUrls = await scrapeMeetingLinks(meetingsBaseUrl, shouldPaginate);
+                const meetingsBaseUrl = `${baseURL}/ieListMeetings.aspx?CommitteeId=${committeeId}`;
+                meetingPageUrls = await scrapeMeetingLinks(meetingsBaseUrl, baseURL, shouldPaginate);
                 console.log(`Found ${meetingPageUrls.length} meeting page links for ${committee.Name}.`);
 
                 // Download minutes for each meeting page URL
@@ -207,11 +210,11 @@ async function main() {
         console.log("Could not retrieve the list of committees.");
     }
 
-    // Councillor information commented out
-    /*
-    console.log("\n--- Councillor Information ---");
-    // ... councillor code ...
-    */
+    return allCommitteesMeetingData;
 }
 
-main();
+// Example usage:
+getMinutesForCouncil('https://democracy.durham.gov.uk');
+
+export { getMinutesForCouncil };
+
