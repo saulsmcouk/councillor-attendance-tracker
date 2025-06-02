@@ -53,5 +53,30 @@
         "fileName": "wiltshire",
         "councilName": "Wiltshire County Council",
         "baseUrl": "https://cms.wiltshire.gov.uk/"
+    },
+    {
+        "fileName": "buckinghamshire",
+        "councilName": "Buckinghamshire County Council",
+        "baseUrl": "https://buckinghamshire.moderngov.co.uk/"
+    },
+    {
+        "fileName": "devon",
+        "councilName": "Devon County Council",
+        "baseUrl": "https://democracy.devon.gov.uk/"
+    },
+    {
+        "fileName": "hertfordshire",
+        "councilName": "Hertfordshire County Council",
+        "baseUrl": "https://democracy.hertfordshire.gov.uk/"
+    },
+    {
+        "fileName": "leicestershire",
+        "councilName": "Leicestershire County Council",
+        "baseUrl": "https://democracy.leics.gov.uk/"
+    },
+    {
+        "fileName": "oxfordshire",
+        "councilName": "Oxfordshire County Council",
+        "baseUrl": "https://mycouncil.oxfordshire.gov.uk/"
     }
 ]
