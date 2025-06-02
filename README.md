@@ -8,17 +8,12 @@ Generates reform councillor attendance json files for councils in `/scrapers/cou
 
 
 Councils that i've tried that don't work:
-Buckinghamshire
 Cambridgeshire
-Devon
 Doncaster
 Durham
 Gloucestershire
-Hertfordshire
-Leicestershire
 Lincolnshire
 Nottinghamshire
-Oxfordshire
 Staffordshire
 
 
