@@ -78,5 +78,30 @@
         "fileName": "oxfordshire",
         "councilName": "Oxfordshire County Council",
         "baseUrl": "https://mycouncil.oxfordshire.gov.uk/"
+    },
+    {
+        "fileName": "adurworthing",
+        "councilName": "Adur District Council & Worthing Borough Council",
+        "baseUrl": "https://democracy.adur-worthing.gov.uk/"
+    },
+    {
+        "fileName": "arun",
+        "councilName": "Arun District Council",
+        "baseUrl": "https://democracy.arun.gov.uk/"
+    },
+    {
+        "fileName": "ashfield",
+        "councilName": "Ashfield District Council",
+        "baseUrl": "https://democracy.ashfield.gov.uk/"
+    },
+    {
+        "fileName": "ashford",
+        "councilName": "Ashford Borough Council",
+        "baseUrl": "https://ashford.moderngov.co.uk/"
+    },
+    {
+        "fileName": "babergh",
+        "councilName": "Babergh District Council",
+        "baseUrl": "https://baberghmidsuffolk.moderngov.co.uk/"
     }
 ]
