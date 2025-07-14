@@ -1,1 +1,532 @@
-[{"fileName":"epsom-and-ewell","councilName":"Epsom and Ewell Borough Council","baseUrl":"https://democracy.epsom-ewell.gov.uk/"},{"fileName":"swindon","councilName":"Swindon Borough Council","baseUrl":"https://ww5.swindon.gov.uk/moderngov/"},{"fileName":"basildon","councilName":"Basildon Borough Council","baseUrl":"https://www.basildonmeetings.info/"},{"fileName":"bexley","councilName":"London Borough of Bexley","baseUrl":"https://democracy.bexley.gov.uk/"},{"fileName":"bradford","councilName":"City of Bradford Metropolitan District Council","baseUrl":"https://bradford.moderngov.co.uk/"},{"fileName":"brent","councilName":"London Borough of Brent","baseUrl":"https://democracy.brent.gov.uk/"},{"fileName":"cambridge","councilName":"Cambridge City Council","baseUrl":"https://democracy.cambridge.gov.uk/"},{"fileName":"cheltenham","councilName":"Cheltenham Borough Council","baseUrl":"https://democracy.cheltenham.gov.uk/"},{"fileName":"city-of-lincoln","councilName":"City of Lincoln Council","baseUrl":"https://democratic.lincoln.gov.uk/"},{"fileName":"crawley","councilName":"Crawley Borough Council","baseUrl":"https://democracy.crawley.gov.uk/"},{"fileName":"enfield","councilName":"London Borough of Enfield","baseUrl":"https://governance.enfield.gov.uk/"},{"fileName":"epping-forest","councilName":"Epping Forest District Council","baseUrl":"http://rds.eppingforestdc.gov.uk/"},{"fileName":"fareham","councilName":"Fareham Borough Council","baseUrl":"https://moderngov.fareham.gov.uk/"},{"fileName":"hastings","councilName":"Hastings Borough Council","baseUrl":"https://hastings.moderngov.co.uk/"},{"fileName":"kingston-upon-thames","councilName":"Royal Borough of Kingston upon Thames","baseUrl":"https://moderngov.kingston.gov.uk/"},{"fileName":"kirklees","councilName":"Kirklees Council","baseUrl":"https://democracy.kirklees.gov.uk/"},{"fileName":"lewisham","councilName":"London Borough of Lewisham","baseUrl":"https://councilmeetings.lewisham.gov.uk/"},{"fileName":"liverpool","councilName":"Liverpool City Council","baseUrl":"http://councillors.liverpool.gov.uk/"},{"fileName":"maidstone","councilName":"Maidstone Borough Council","baseUrl":"https://meetings.maidstone.gov.uk/"},{"fileName":"merton","councilName":"London Borough of Merton","baseUrl":"https://merton.moderngov.co.uk/"},{"fileName":"newcastle-upon-tyne","councilName":"Newcastle City Council","baseUrl":"http://democracy.newcastle.gov.uk/"},{"fileName":"portsmouth","councilName":"Portsmouth City Council","baseUrl":"http://democracy.portsmouth.gov.uk/"},{"fileName":"south-cambridgeshire","councilName":"South Cambridgeshire District Council","baseUrl":"http://scambs.moderngov.co.uk/"},{"fileName":"southampton","councilName":"Southampton City Council","baseUrl":"https://www.southampton.gov.uk/moderngov/"},{"fileName":"stockport","councilName":"Stockport Metropolitan Borough Council","baseUrl":"http://democracy.stockport.gov.uk/"},{"fileName":"sutton","councilName":"London Borough of Sutton","baseUrl":"https://moderngov.sutton.gov.uk/"},{"fileName":"tameside","councilName":"Tameside Metropolitan Borough Council","baseUrl":"http://tameside.moderngov.co.uk/"},{"fileName":"tower-hamlets","councilName":"London Borough of Tower Hamlets","baseUrl":"http://democracy.towerhamlets.gov.uk/"},{"fileName":"trafford","councilName":"Trafford Metropolitan Borough Council","baseUrl":"https://democratic.trafford.gov.uk/"},{"fileName":"west-lancashire","councilName":"West Lancashire Borough Council","baseUrl":"https://democracy.westlancs.gov.uk/"},{"fileName":"wirral","councilName":"Wirral Borough Council","baseUrl":"https://democracy.wirral.gov.uk/"},{"fileName":"wokingham","councilName":"Wokingham Borough Council","baseUrl":"https://wokingham.moderngov.co.uk/"},{"fileName":"wolverhampton","councilName":"City of Wolverhampton Council","baseUrl":"https://wolverhampton.moderngov.co.uk/"},{"fileName":"brentwood","councilName":"Brentwood Borough Council","baseUrl":"https://brentwood.moderngov.co.uk/"},{"fileName":"sevenoaks","councilName":"Sevenoaks District Council","baseUrl":"https://cds.sevenoaks.gov.uk/"},{"fileName":"ashford","councilName":"Ashford Borough Council","baseUrl":"https://ashford.moderngov.co.uk/"},{"fileName":"lancaster","councilName":"Lancaster City Council","baseUrl":"https://committeeadmin.lancaster.gov.uk/"},{"fileName":"halton","councilName":"Halton Borough Council","baseUrl":"https://councillors.halton.gov.uk/"},{"fileName":"west-berkshire","councilName":"West Berkshire Council","baseUrl":"https://decisionmaking.westberks.gov.uk/"},{"fileName":"breckland","councilName":"Breckland District Council","baseUrl":"https://democracy.breckland.gov.uk/"},{"fileName":"canterbury","councilName":"Canterbury City Council","baseUrl":"https://democracy.canterbury.gov.uk/"},{"fileName":"scarborough","councilName":"Scarborough Borough Council","baseUrl":"https://democracy.scarborough.gov.uk/"},{"fileName":"malvern-hills","councilName":"Malvern Hills District Council","baseUrl":"https://moderngov.malvernhills.gov.uk/"},{"fileName":"oadby-and-wigston","councilName":"Oadby and Wigston Borough Council","baseUrl":"https://moderngov.oadby-wigston.gov.uk/"},{"fileName":"surrey-heath","councilName":"Surrey Heath Borough Council","baseUrl":"https://surreyheath.moderngov.co.uk/"},{"fileName":"south-gloucestershire","councilName":"South Gloucestershire Council","baseUrl":"https://council.southglos.gov.uk/"},{"fileName":"bath-and-north-east-somerset","councilName":"Bath and North East Somerset Council","baseUrl":"https://democracy.bathnes.gov.uk/"},{"fileName":"darlington","councilName":"Darlington Borough Council","baseUrl":"https://democracy.darlington.gov.uk/"},{"fileName":"gravesham","councilName":"Gravesham Borough Council","baseUrl":"https://democracy.gravesham.gov.uk/"},{"fileName":"kent","councilName":"Kent County Council","baseUrl":"https://democracy.kent.gov.uk/"},{"fileName":"lichfield","councilName":"Lichfield District Council","baseUrl":"https://democracy.lichfielddc.gov.uk/"},{"fileName":"mid-devon","councilName":"Mid Devon District Council","baseUrl":"https://democracy.middevon.gov.uk/"},{"fileName":"tonbridge-and-malling","councilName":"Tonbridge and Malling Borough Council","baseUrl":"https://democracy.tmbc.gov.uk/"},{"fileName":"waverley","councilName":"Waverley Borough Council","baseUrl":"https://modgov.waverley.gov.uk/"},{"fileName":"surrey","councilName":"Surrey County Council","baseUrl":"https://mycouncil.surreycc.gov.uk/"},{"fileName":"nottingham","councilName":"Nottingham City Council","baseUrl":"https://committee.nottinghamcity.gov.uk/"},{"fileName":"kings-lynn-and-west-norfolk","councilName":"Borough Council of King's Lynn and West Norfolk","baseUrl":"https://democracy.west-norfolk.gov.uk/"},{"fileName":"brighton-and-hove","councilName":"Brighton and Hove City Council","baseUrl":"https://present.brighton-hove.gov.uk/"},{"fileName":"blackburn-with-darwen","councilName":"Blackburn with Darwen Borough Council","baseUrl":"https://democracy.blackburn.gov.uk/"},{"fileName":"north-kesteven","councilName":"North Kesteven District Council","baseUrl":"https://democracy.n-kesteven.gov.uk/"},{"fileName":"rushcliffe","councilName":"Rushcliffe Borough Council","baseUrl":"https://democracy.rushcliffe.gov.uk/"},{"fileName":"west-lindsey","councilName":"West Lindsey District Council","baseUrl":"https://democracy.west-lindsey.gov.uk/"},{"fileName":"west-sussex","councilName":"West Sussex County Council","baseUrl":"https://westsussex.moderngov.co.uk/"},{"fileName":"north-west-leicestershire","councilName":"North West Leicestershire District Council","baseUrl":"https://minutes-1.nwleics.gov.uk/"},{"fileName":"buckinghamshire","councilName":"Buckinghamshire Council","baseUrl":"https://buckinghamshire.moderngov.co.uk/"},{"fileName":"cornwall","councilName":"Cornwall Council","baseUrl":"https://democracy.cornwall.gov.uk/"},{"fileName":"gloucester","councilName":"Gloucester City Council","baseUrl":"https://democracy.gloucester.gov.uk/"},{"fileName":"hertfordshire","councilName":"Hertfordshire County Council","baseUrl":"https://democracy.hertfordshire.gov.uk/"},{"fileName":"leicestershire","councilName":"Leicestershire County Council","baseUrl":"https://politics.leics.gov.uk/"},{"fileName":"oxfordshire","councilName":"Oxfordshire County Council","baseUrl":"https://mycouncil.oxfordshire.gov.uk/"},{"fileName":"warwickshire","councilName":"Warwickshire County Council","baseUrl":"https://democracy.warwickshire.gov.uk/"},{"fileName":"gosport","councilName":"Gosport Borough Council","baseUrl":"https://democracy.gosport.gov.uk/"},{"fileName":"flintshire","councilName":"Flintshire County Council","baseUrl":"https://committeemeetings.flintshire.gov.uk/"},{"fileName":"cardiff","councilName":"City of Cardiff Council","baseUrl":"https://cardiff.moderngov.co.uk/"},{"fileName":"ceredigion","councilName":"Ceredigion County Council","baseUrl":"https://council.ceredigion.gov.uk/"},{"fileName":"coventry","councilName":"Coventry City Council","baseUrl":"https://edemocracy.coventry.gov.uk/"},{"fileName":"runnymede","councilName":"Runnymede Borough Council","baseUrl":"https://democracy.runnymede.gov.uk/"},{"fileName":"somerset","councilName":"Somerset County Council","baseUrl":"https://democracy.somerset.gov.uk/"},{"fileName":"southwark","councilName":"London Borough of Southwark","baseUrl":"https://moderngov.southwark.gov.uk/"},{"fileName":"swansea","councilName":"City and County of Swansea Council","baseUrl":"https://democracy.swansea.gov.uk/"},{"fileName":"gwynedd","councilName":"Gwynedd Council","baseUrl":"https://democracy.gwynedd.llyw.cymru/"},{"fileName":"isle-of-anglesey","councilName":"Isle of Anglesey County Council","baseUrl":"https://democracy.anglesey.gov.uk/"},{"fileName":"monmouthshire","councilName":"Monmouthshire County Council","baseUrl":"https://democracy.monmouthshire.gov.uk/"},{"fileName":"neath-port-talbot","councilName":"Neath Port Talbot County Borough Council","baseUrl":"https://democracy.npt.gov.uk/"},{"fileName":"broxtowe","councilName":"Broxtowe Borough Council","baseUrl":"https://democracy.broxtowe.gov.uk/"},{"fileName":"cotswold","councilName":"Cotswold District Council","baseUrl":"https://meetings.cotswold.gov.uk/"},{"fileName":"derbyshire-dales","councilName":"Derbyshire Dales District Council","baseUrl":"https://democracy.derbyshiredales.gov.uk/"},{"fileName":"hertsmere","councilName":"Hertsmere Borough Council","baseUrl":"https://hertsmere.moderngov.co.uk/"},{"fileName":"newark-and-sherwood","councilName":"Newark and Sherwood District Council","baseUrl":"https://democracy.newark-sherwooddc.gov.uk/"},{"fileName":"new-forest","councilName":"New Forest District Council","baseUrl":"https://democracy.newforest.gov.uk/"},{"fileName":"test-valley","councilName":"Test Valley Borough Council","baseUrl":"https://democracy.testvalley.gov.uk/"},{"fileName":"ashfield","councilName":"Ashfield District Council","baseUrl":"https://democracy.ashfield.gov.uk/"},{"fileName":"bracknell-forest","councilName":"Bracknell Forest Council","baseUrl":"https://democratic.bracknell-forest.gov.uk/"},{"fileName":"thanet","councilName":"Thanet District Council","baseUrl":"https://democracy.thanet.gov.uk/"},{"fileName":"swale","councilName":"Swale Borough Council","baseUrl":"https://ws.swale.gov.uk/meetings/"},{"fileName":"exeter","councilName":"Exeter City Council","baseUrl":"https://committees.exeter.gov.uk/"},{"fileName":"hart","councilName":"Hart District Council","baseUrl":"https://hart.moderngov.co.uk/"},{"fileName":"havant","councilName":"Havant Borough Council","baseUrl":"https://havant.moderngov.co.uk/"},{"fileName":"stroud","councilName":"Stroud District Council","baseUrl":"https://stroud.moderngov.co.uk/"},{"fileName":"west-oxfordshire","councilName":"West Oxfordshire District Council","baseUrl":"https://meetings.westoxon.gov.uk/"},{"fileName":"west-northamptonshire","councilName":"West Northamptonshire Council","baseUrl":"https://westnorthants.moderngov.co.uk/"},{"fileName":"north-northamptonshire","councilName":"North Northamptonshire Council","baseUrl":"https://northnorthants.moderngov.co.uk/"},{"fileName":"lincolnshire","councilName":"Lincolnshire County Council","baseUrl":"https://lincolnshire.moderngov.co.uk/"},{"fileName":"lancashire","councilName":"Lancashire County Council","baseUrl":"https://council.lancashire.gov.uk/"},{"fileName":"derbyshire","councilName":"Derbyshire County Council","baseUrl":"https://democracy.derbyshire.gov.uk/"},{"fileName":"northumberland","councilName":"Northumberland County Council","baseUrl":"https://northumberland.moderngov.co.uk/"}]
+[
+    {
+        "fileName": "epsom-and-ewell",
+        "councilName": "Epsom and Ewell Borough Council",
+        "baseUrl": "https://democracy.epsom-ewell.gov.uk/"
+    },
+    {
+        "fileName": "swindon",
+        "councilName": "Swindon Borough Council",
+        "baseUrl": "https://ww5.swindon.gov.uk/moderngov/"
+    },
+    {
+        "fileName": "basildon",
+        "councilName": "Basildon Borough Council",
+        "baseUrl": "https://www.basildonmeetings.info/"
+    },
+    {
+        "fileName": "bexley",
+        "councilName": "London Borough of Bexley",
+        "baseUrl": "https://democracy.bexley.gov.uk/"
+    },
+    {
+        "fileName": "bradford",
+        "councilName": "City of Bradford Metropolitan District Council",
+        "baseUrl": "https://bradford.moderngov.co.uk/"
+    },
+    {
+        "fileName": "brent",
+        "councilName": "London Borough of Brent",
+        "baseUrl": "https://democracy.brent.gov.uk/"
+    },
+    {
+        "fileName": "cambridge",
+        "councilName": "Cambridge City Council",
+        "baseUrl": "https://democracy.cambridge.gov.uk/"
+    },
+    {
+        "fileName": "cheltenham",
+        "councilName": "Cheltenham Borough Council",
+        "baseUrl": "https://democracy.cheltenham.gov.uk/"
+    },
+    {
+        "fileName": "city-of-lincoln",
+        "councilName": "City of Lincoln Council",
+        "baseUrl": "https://democratic.lincoln.gov.uk/"
+    },
+    {
+        "fileName": "crawley",
+        "councilName": "Crawley Borough Council",
+        "baseUrl": "https://democracy.crawley.gov.uk/"
+    },
+    {
+        "fileName": "enfield",
+        "councilName": "London Borough of Enfield",
+        "baseUrl": "https://governance.enfield.gov.uk/"
+    },
+    {
+        "fileName": "epping-forest",
+        "councilName": "Epping Forest District Council",
+        "baseUrl": "http://rds.eppingforestdc.gov.uk/"
+    },
+    {
+        "fileName": "fareham",
+        "councilName": "Fareham Borough Council",
+        "baseUrl": "https://moderngov.fareham.gov.uk/"
+    },
+    {
+        "fileName": "hastings",
+        "councilName": "Hastings Borough Council",
+        "baseUrl": "https://hastings.moderngov.co.uk/"
+    },
+    {
+        "fileName": "kingston-upon-thames",
+        "councilName": "Royal Borough of Kingston upon Thames",
+        "baseUrl": "https://moderngov.kingston.gov.uk/"
+    },
+    {
+        "fileName": "kirklees",
+        "councilName": "Kirklees Council",
+        "baseUrl": "https://democracy.kirklees.gov.uk/"
+    },
+    {
+        "fileName": "lewisham",
+        "councilName": "London Borough of Lewisham",
+        "baseUrl": "https://councilmeetings.lewisham.gov.uk/"
+    },
+    {
+        "fileName": "liverpool",
+        "councilName": "Liverpool City Council",
+        "baseUrl": "http://councillors.liverpool.gov.uk/"
+    },
+    {
+        "fileName": "maidstone",
+        "councilName": "Maidstone Borough Council",
+        "baseUrl": "https://meetings.maidstone.gov.uk/"
+    },
+    {
+        "fileName": "merton",
+        "councilName": "London Borough of Merton",
+        "baseUrl": "https://merton.moderngov.co.uk/"
+    },
+    {
+        "fileName": "newcastle-upon-tyne",
+        "councilName": "Newcastle City Council",
+        "baseUrl": "http://democracy.newcastle.gov.uk/"
+    },
+    {
+        "fileName": "portsmouth",
+        "councilName": "Portsmouth City Council",
+        "baseUrl": "http://democracy.portsmouth.gov.uk/"
+    },
+    {
+        "fileName": "south-cambridgeshire",
+        "councilName": "South Cambridgeshire District Council",
+        "baseUrl": "http://scambs.moderngov.co.uk/"
+    },
+    {
+        "fileName": "southampton",
+        "councilName": "Southampton City Council",
+        "baseUrl": "https://www.southampton.gov.uk/moderngov/"
+    },
+    {
+        "fileName": "stockport",
+        "councilName": "Stockport Metropolitan Borough Council",
+        "baseUrl": "http://democracy.stockport.gov.uk/"
+    },
+    {
+        "fileName": "sutton",
+        "councilName": "London Borough of Sutton",
+        "baseUrl": "https://moderngov.sutton.gov.uk/"
+    },
+    {
+        "fileName": "tameside",
+        "councilName": "Tameside Metropolitan Borough Council",
+        "baseUrl": "http://tameside.moderngov.co.uk/"
+    },
+    {
+        "fileName": "tower-hamlets",
+        "councilName": "London Borough of Tower Hamlets",
+        "baseUrl": "http://democracy.towerhamlets.gov.uk/"
+    },
+    {
+        "fileName": "trafford",
+        "councilName": "Trafford Metropolitan Borough Council",
+        "baseUrl": "https://democratic.trafford.gov.uk/"
+    },
+    {
+        "fileName": "west-lancashire",
+        "councilName": "West Lancashire Borough Council",
+        "baseUrl": "https://democracy.westlancs.gov.uk/"
+    },
+    {
+        "fileName": "wirral",
+        "councilName": "Wirral Borough Council",
+        "baseUrl": "https://democracy.wirral.gov.uk/"
+    },
+    {
+        "fileName": "wokingham",
+        "councilName": "Wokingham Borough Council",
+        "baseUrl": "https://wokingham.moderngov.co.uk/"
+    },
+    {
+        "fileName": "wolverhampton",
+        "councilName": "City of Wolverhampton Council",
+        "baseUrl": "https://wolverhampton.moderngov.co.uk/"
+    },
+    {
+        "fileName": "brentwood",
+        "councilName": "Brentwood Borough Council",
+        "baseUrl": "https://brentwood.moderngov.co.uk/"
+    },
+    {
+        "fileName": "sevenoaks",
+        "councilName": "Sevenoaks District Council",
+        "baseUrl": "https://cds.sevenoaks.gov.uk/"
+    },
+    {
+        "fileName": "ashford",
+        "councilName": "Ashford Borough Council",
+        "baseUrl": "https://ashford.moderngov.co.uk/"
+    },
+    {
+        "fileName": "lancaster",
+        "councilName": "Lancaster City Council",
+        "baseUrl": "https://committeeadmin.lancaster.gov.uk/"
+    },
+    {
+        "fileName": "halton",
+        "councilName": "Halton Borough Council",
+        "baseUrl": "https://councillors.halton.gov.uk/"
+    },
+    {
+        "fileName": "west-berkshire",
+        "councilName": "West Berkshire Council",
+        "baseUrl": "https://decisionmaking.westberks.gov.uk/"
+    },
+    {
+        "fileName": "breckland",
+        "councilName": "Breckland District Council",
+        "baseUrl": "https://democracy.breckland.gov.uk/"
+    },
+    {
+        "fileName": "canterbury",
+        "councilName": "Canterbury City Council",
+        "baseUrl": "https://democracy.canterbury.gov.uk/"
+    },
+    {
+        "fileName": "scarborough",
+        "councilName": "Scarborough Borough Council",
+        "baseUrl": "https://democracy.scarborough.gov.uk/"
+    },
+    {
+        "fileName": "malvern-hills",
+        "councilName": "Malvern Hills District Council",
+        "baseUrl": "https://moderngov.malvernhills.gov.uk/"
+    },
+    {
+        "fileName": "oadby-and-wigston",
+        "councilName": "Oadby and Wigston Borough Council",
+        "baseUrl": "https://moderngov.oadby-wigston.gov.uk/"
+    },
+    {
+        "fileName": "surrey-heath",
+        "councilName": "Surrey Heath Borough Council",
+        "baseUrl": "https://surreyheath.moderngov.co.uk/"
+    },
+    {
+        "fileName": "south-gloucestershire",
+        "councilName": "South Gloucestershire Council",
+        "baseUrl": "https://council.southglos.gov.uk/"
+    },
+    {
+        "fileName": "bath-and-north-east-somerset",
+        "councilName": "Bath and North East Somerset Council",
+        "baseUrl": "https://democracy.bathnes.gov.uk/"
+    },
+    {
+        "fileName": "darlington",
+        "councilName": "Darlington Borough Council",
+        "baseUrl": "https://democracy.darlington.gov.uk/"
+    },
+    {
+        "fileName": "gravesham",
+        "councilName": "Gravesham Borough Council",
+        "baseUrl": "https://democracy.gravesham.gov.uk/"
+    },
+    {
+        "fileName": "kent",
+        "councilName": "Kent County Council",
+        "baseUrl": "https://democracy.kent.gov.uk/"
+    },
+    {
+        "fileName": "lichfield",
+        "councilName": "Lichfield District Council",
+        "baseUrl": "https://democracy.lichfielddc.gov.uk/"
+    },
+    {
+        "fileName": "mid-devon",
+        "councilName": "Mid Devon District Council",
+        "baseUrl": "https://democracy.middevon.gov.uk/"
+    },
+    {
+        "fileName": "tonbridge-and-malling",
+        "councilName": "Tonbridge and Malling Borough Council",
+        "baseUrl": "https://democracy.tmbc.gov.uk/"
+    },
+    {
+        "fileName": "waverley",
+        "councilName": "Waverley Borough Council",
+        "baseUrl": "https://modgov.waverley.gov.uk/"
+    },
+    {
+        "fileName": "surrey",
+        "councilName": "Surrey County Council",
+        "baseUrl": "https://mycouncil.surreycc.gov.uk/"
+    },
+    {
+        "fileName": "nottingham",
+        "councilName": "Nottingham City Council",
+        "baseUrl": "https://committee.nottinghamcity.gov.uk/"
+    },
+    {
+        "fileName": "kings-lynn-and-west-norfolk",
+        "councilName": "Borough Council of King's Lynn and West Norfolk",
+        "baseUrl": "https://democracy.west-norfolk.gov.uk/"
+    },
+    {
+        "fileName": "brighton-and-hove",
+        "councilName": "Brighton and Hove City Council",
+        "baseUrl": "https://present.brighton-hove.gov.uk/"
+    },
+    {
+        "fileName": "blackburn-with-darwen",
+        "councilName": "Blackburn with Darwen Borough Council",
+        "baseUrl": "https://democracy.blackburn.gov.uk/"
+    },
+    {
+        "fileName": "north-kesteven",
+        "councilName": "North Kesteven District Council",
+        "baseUrl": "https://democracy.n-kesteven.gov.uk/"
+    },
+    {
+        "fileName": "rushcliffe",
+        "councilName": "Rushcliffe Borough Council",
+        "baseUrl": "https://democracy.rushcliffe.gov.uk/"
+    },
+    {
+        "fileName": "west-lindsey",
+        "councilName": "West Lindsey District Council",
+        "baseUrl": "https://democracy.west-lindsey.gov.uk/"
+    },
+    {
+        "fileName": "west-sussex",
+        "councilName": "West Sussex County Council",
+        "baseUrl": "https://westsussex.moderngov.co.uk/"
+    },
+    {
+        "fileName": "north-west-leicestershire",
+        "councilName": "North West Leicestershire District Council",
+        "baseUrl": "https://minutes-1.nwleics.gov.uk/"
+    },
+    {
+        "fileName": "buckinghamshire",
+        "councilName": "Buckinghamshire Council",
+        "baseUrl": "https://buckinghamshire.moderngov.co.uk/"
+    },
+    {
+        "fileName": "cornwall",
+        "councilName": "Cornwall Council",
+        "baseUrl": "https://democracy.cornwall.gov.uk/"
+    },
+    {
+        "fileName": "gloucester",
+        "councilName": "Gloucester City Council",
+        "baseUrl": "https://democracy.gloucester.gov.uk/"
+    },
+    {
+        "fileName": "hertfordshire",
+        "councilName": "Hertfordshire County Council",
+        "baseUrl": "https://democracy.hertfordshire.gov.uk/"
+    },
+    {
+        "fileName": "leicestershire",
+        "councilName": "Leicestershire County Council",
+        "baseUrl": "https://politics.leics.gov.uk/"
+    },
+    {
+        "fileName": "oxfordshire",
+        "councilName": "Oxfordshire County Council",
+        "baseUrl": "https://mycouncil.oxfordshire.gov.uk/"
+    },
+    {
+        "fileName": "warwickshire",
+        "councilName": "Warwickshire County Council",
+        "baseUrl": "https://democracy.warwickshire.gov.uk/"
+    },
+    {
+        "fileName": "gosport",
+        "councilName": "Gosport Borough Council",
+        "baseUrl": "https://democracy.gosport.gov.uk/"
+    },
+    {
+        "fileName": "flintshire",
+        "councilName": "Flintshire County Council",
+        "baseUrl": "https://committeemeetings.flintshire.gov.uk/"
+    },
+    {
+        "fileName": "cardiff",
+        "councilName": "City of Cardiff Council",
+        "baseUrl": "https://cardiff.moderngov.co.uk/"
+    },
+    {
+        "fileName": "ceredigion",
+        "councilName": "Ceredigion County Council",
+        "baseUrl": "https://council.ceredigion.gov.uk/"
+    },
+    {
+        "fileName": "coventry",
+        "councilName": "Coventry City Council",
+        "baseUrl": "https://edemocracy.coventry.gov.uk/"
+    },
+    {
+        "fileName": "runnymede",
+        "councilName": "Runnymede Borough Council",
+        "baseUrl": "https://democracy.runnymede.gov.uk/"
+    },
+    {
+        "fileName": "somerset",
+        "councilName": "Somerset County Council",
+        "baseUrl": "https://democracy.somerset.gov.uk/"
+    },
+    {
+        "fileName": "southwark",
+        "councilName": "London Borough of Southwark",
+        "baseUrl": "https://moderngov.southwark.gov.uk/"
+    },
+    {
+        "fileName": "swansea",
+        "councilName": "City and County of Swansea Council",
+        "baseUrl": "https://democracy.swansea.gov.uk/"
+    },
+    {
+        "fileName": "gwynedd",
+        "councilName": "Gwynedd Council",
+        "baseUrl": "https://democracy.gwynedd.llyw.cymru/"
+    },
+    {
+        "fileName": "isle-of-anglesey",
+        "councilName": "Isle of Anglesey County Council",
+        "baseUrl": "https://democracy.anglesey.gov.uk/"
+    },
+    {
+        "fileName": "monmouthshire",
+        "councilName": "Monmouthshire County Council",
+        "baseUrl": "https://democracy.monmouthshire.gov.uk/"
+    },
+    {
+        "fileName": "neath-port-talbot",
+        "councilName": "Neath Port Talbot County Borough Council",
+        "baseUrl": "https://democracy.npt.gov.uk/"
+    },
+    {
+        "fileName": "broxtowe",
+        "councilName": "Broxtowe Borough Council",
+        "baseUrl": "https://democracy.broxtowe.gov.uk/"
+    },
+    {
+        "fileName": "cotswold",
+        "councilName": "Cotswold District Council",
+        "baseUrl": "https://meetings.cotswold.gov.uk/"
+    },
+    {
+        "fileName": "derbyshire-dales",
+        "councilName": "Derbyshire Dales District Council",
+        "baseUrl": "https://democracy.derbyshiredales.gov.uk/"
+    },
+    {
+        "fileName": "hertsmere",
+        "councilName": "Hertsmere Borough Council",
+        "baseUrl": "https://hertsmere.moderngov.co.uk/"
+    },
+    {
+        "fileName": "newark-and-sherwood",
+        "councilName": "Newark and Sherwood District Council",
+        "baseUrl": "https://democracy.newark-sherwooddc.gov.uk/"
+    },
+    {
+        "fileName": "new-forest",
+        "councilName": "New Forest District Council",
+        "baseUrl": "https://democracy.newforest.gov.uk/"
+    },
+    {
+        "fileName": "test-valley",
+        "councilName": "Test Valley Borough Council",
+        "baseUrl": "https://democracy.testvalley.gov.uk/"
+    },
+    {
+        "fileName": "ashfield",
+        "councilName": "Ashfield District Council",
+        "baseUrl": "https://democracy.ashfield.gov.uk/"
+    },
+    {
+        "fileName": "bracknell-forest",
+        "councilName": "Bracknell Forest Council",
+        "baseUrl": "https://democratic.bracknell-forest.gov.uk/"
+    },
+    {
+        "fileName": "thanet",
+        "councilName": "Thanet District Council",
+        "baseUrl": "https://democracy.thanet.gov.uk/"
+    },
+    {
+        "fileName": "swale",
+        "councilName": "Swale Borough Council",
+        "baseUrl": "https://ws.swale.gov.uk/meetings/"
+    },
+    {
+        "fileName": "exeter",
+        "councilName": "Exeter City Council",
+        "baseUrl": "https://committees.exeter.gov.uk/"
+    },
+    {
+        "fileName": "hart",
+        "councilName": "Hart District Council",
+        "baseUrl": "https://hart.moderngov.co.uk/"
+    },
+    {
+        "fileName": "havant",
+        "councilName": "Havant Borough Council",
+        "baseUrl": "https://havant.moderngov.co.uk/"
+    },
+    {
+        "fileName": "stroud",
+        "councilName": "Stroud District Council",
+        "baseUrl": "https://stroud.moderngov.co.uk/"
+    },
+    {
+        "fileName": "west-oxfordshire",
+        "councilName": "West Oxfordshire District Council",
+        "baseUrl": "https://meetings.westoxon.gov.uk/"
+    },
+    {
+        "fileName": "west-northamptonshire",
+        "councilName": "West Northamptonshire Council",
+        "baseUrl": "https://westnorthants.moderngov.co.uk/"
+    },
+    {
+        "fileName": "north-northamptonshire",
+        "councilName": "North Northamptonshire Council",
+        "baseUrl": "https://northnorthants.moderngov.co.uk/"
+    },
+    {
+        "fileName": "lincolnshire",
+        "councilName": "Lincolnshire County Council",
+        "baseUrl": "https://lincolnshire.moderngov.co.uk/"
+    },
+    {
+        "fileName": "lancashire",
+        "councilName": "Lancashire County Council",
+        "baseUrl": "https://council.lancashire.gov.uk/"
+    },
+    {
+        "fileName": "derbyshire",
+        "councilName": "Derbyshire County Council",
+        "baseUrl": "https://democracy.derbyshire.gov.uk/"
+    },
+    {
+        "fileName": "northumberland",
+        "councilName": "Northumberland County Council",
+        "baseUrl": "https://northumberland.moderngov.co.uk/"
+    }
+]
