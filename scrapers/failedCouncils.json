@@ -1,0 +1,137 @@
+[
+    {
+        "fileName": "aylesbury-vale",
+        "councilName": "Aylesbury Vale District Council",
+        "baseUrl": "https://aylesburyvale.moderngov.co.uk/"
+    },
+    {
+        "fileName": "barking-and-dagenham",
+        "councilName": "London Borough of Barking and Dagenham",
+        "baseUrl": "https://modgov.lbbd.gov.uk/internet/"
+    },
+    {
+        "fileName": "bromley",
+        "councilName": "London Borough of Bromley",
+        "baseUrl": "https://cds.bromley.gov.uk/"
+    },
+    {
+        "fileName": "eastleigh",
+        "councilName": "Eastleigh Borough Council",
+        "baseUrl": "https://meetings.eastleigh.gov.uk/"
+    },
+    {
+        "fileName": "elmbridge",
+        "councilName": "Elmbridge Borough Council",
+        "baseUrl": "https://mygov.elmbridge.gov.uk/"
+    },
+    {
+        "fileName": "harrow",
+        "councilName": "London Borough of Harrow",
+        "baseUrl": "https://www.harrow.gov.uk/www2/"
+    },
+    {
+        "fileName": "huntingdonshire",
+        "councilName": "Huntingdonshire District Council",
+        "baseUrl": "https://applications.huntingdonshire.gov.uk/moderngov/"
+    },
+    {
+        "fileName": "lambeth",
+        "councilName": "London Borough of Lambeth",
+        "baseUrl": "https://moderngov.lambeth.gov.uk/"
+    },
+    {
+        "fileName": "newham",
+        "councilName": "London Borough of Newham",
+        "baseUrl": "https://"
+    },
+    {
+        "fileName": "richmond-upon-thames",
+        "councilName": "London Borough of Richmond upon Thames",
+        "baseUrl": "https://cabnet.richmond.gov.uk/"
+    },
+    {
+        "fileName": "rochdale",
+        "councilName": "Rochdale Metropolitan Borough Council",
+        "baseUrl": "http://democracy.rochdale.gov.uk/"
+    },
+    {
+        "fileName": "sefton",
+        "councilName": "Sefton Metropolitan Borough Council",
+        "baseUrl": "http://modgov.sefton.gov.uk/moderngov/"
+    },
+    {
+        "fileName": "st-helens",
+        "councilName": "St Helens Council",
+        "baseUrl": "http://moderngov.sthelens.gov.uk/"
+    },
+    {
+        "fileName": "tunbridge-wells",
+        "councilName": "Tunbridge Wells Borough Council",
+        "baseUrl": "http://democracy.tunbridgewells.gov.uk/meetings/"
+    },
+    {
+        "fileName": "cheshire-west-and-chester",
+        "councilName": "Cheshire West and Chester Council",
+        "baseUrl": "http://cmttpublic.cheshirewestandchester.gov.uk/"
+    },
+    {
+        "fileName": "dartford",
+        "councilName": "Dartford Borough Council",
+        "baseUrl": "https://committeedmz.dartford.gov.uk/"
+    },
+    {
+        "fileName": "gloucestershire",
+        "councilName": "Gloucestershire County Council",
+        "baseUrl": "http://glostext.gloucestershire.gov.uk/"
+    },
+    {
+        "fileName": "north-devon",
+        "councilName": "North Devon District Council",
+        "baseUrl": "http://democracy.northdevon.gov.uk/"
+    },
+    {
+        "fileName": "stratford-on-avon",
+        "councilName": "Stratford-on-Avon District Council",
+        "baseUrl": "http://democracy.stratford.gov.uk/"
+    },
+    {
+        "fileName": "forest-of-dean",
+        "councilName": "Forest of Dean District Council",
+        "baseUrl": "http://meetings.fdean.gov.uk/"
+    },
+    {
+        "fileName": "tendring",
+        "councilName": "Tendring District Council",
+        "baseUrl": "https://tdcdemocracy.tendringdc.gov.uk/"
+    },
+    {
+        "fileName": "stoke-on-trent",
+        "councilName": "Stoke-on-Trent City Council",
+        "baseUrl": "http://www.moderngov.stoke.gov.uk/"
+    },
+    {
+        "fileName": "copeland",
+        "councilName": "Copeland Borough Council",
+        "baseUrl": "https://copeland.moderngov.co.uk/"
+    },
+    {
+        "fileName": "hampshire",
+        "councilName": "Hampshire County Council",
+        "baseUrl": "https://democracy.hants.gov.uk/"
+    },
+    {
+        "fileName": "staffordshire",
+        "councilName": "Staffordshire County Council",
+        "baseUrl": "http://moderngov.staffordshire.gov.uk/"
+    },
+    {
+        "fileName": "wandsworth",
+        "councilName": "London Borough of Wandsworth",
+        "baseUrl": "https://democracy.wandsworth.gov.uk/"
+    },
+    {
+        "fileName": "gedling",
+        "councilName": "Gedling Borough Council",
+        "baseUrl": "https://democracy.gedling.gov.uk/"
+    }
+]
