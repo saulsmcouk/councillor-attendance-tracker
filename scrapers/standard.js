@@ -1,6 +1,9 @@
 import * as cheerio from 'cheerio';
 import * as fs from 'fs/promises';
 
+// TODO:
+// Double check that redirects work (eg tunbridgeWells probably has a redirect) - looks like they dont so fix that
+
 const getCouncillorsPage = async (councilName, baseUrl) => {
     const memberListUrl = 'mgMemberIndex.aspx?VW=TABLE&PIC=1';
 
@@ -120,7 +123,7 @@ const getReformAttendanceData = (attendanceHtml, UIDs) => {
     return data;
 };
 
-const collectReformAttendanceData = async (
+export const collectReformAttendanceData = async (
     councilName,
     baseUrl,
     startDate = { day: 1, month: 5, year: 2025 },
