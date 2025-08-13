@@ -29,3 +29,13 @@ Run by:
 
 
 Outputs json files to `/scrapers/out` folder.
+
+# Frontend 
+
+`$ cd views 
+$ npm start` 
+
+Navigate to localhost:3000, and voila. 
+
+# Todo 
+Transpose this entire list: https://github.com/poteris/council-scraper/blob/main/council_list_scraper/source_data/opencouncildata_councils.csv - probably an hour or two's work to transpose / check each one - and then we should have coverage of about 80% of councils
