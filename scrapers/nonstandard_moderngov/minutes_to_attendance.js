@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { dirname, resolve } from 'path';
-import { GoogleGenAI } from '@google/genai';    
+import { GoogleGenAI } from '@google/genai';
 import extract from 'pdf-text-extract';
 
 dotenv.config();
@@ -15,6 +15,7 @@ const GEMINI_MODEL_CODE = process.env.GEMINI_MODEL_CODE || 'gemini-1.5-flash';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const DIRECTORY_PATH = resolve(__dirname, '../minutes/County_Council');
+const OUTPUT_PATH = path.join(DIRECTORY_PATH, 'attendance_results.json'); // Define output path
 
 // Initialize Google GenAI
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
@@ -35,13 +36,13 @@ function extractTextFromPDF(filePath) {
 
 async function extractAttendanceWithGenAI(text, filename) {
     const prompt = `
-Please analyze the following council meeting minutes text and extract the attendance information. 
+Please analyze the following council meeting minutes text and extract the attendance information.
 Look for sections that list who was present, absent, or attended the meeting.
 
 Please return a JSON object with the following structure:
 {
     "meeting_title": "Title of the meeting if available",
-    "meeting_date": "Date of the meeting if available", 
+    "meeting_date": "Date of the meeting if available",
     "present": ["Councillor Name 1", "Councillor Name 2", "Councillor Name 3"],
     "absent": ["Councillor Name 4", "Councillor Name 5"],
     "officers_present": ["Officer Name 1", "Officer Name 2"],
@@ -49,13 +50,13 @@ Please return a JSON object with the following structure:
     "notes": "Any additional notes about attendance"
 }
 
-IMPORTANT: 
+IMPORTANT:
 - For the "present" array, list each councillor's name as a separate string in the array
 - Include full names (e.g. "Councillor John Smith", "Cllr Jane Doe")
 - Each name should be a separate array element
 - If any category is not found or mentioned, include it as an empty array or empty string
 - Only extract names that are clearly identified as attendees
-
+- Save the date as YYYY-MM-DD format
 Meeting minutes text:
 ${text.substring(0, 8000)} // Limit text to avoid token limits
 `;
@@ -65,14 +66,14 @@ ${text.substring(0, 8000)} // Limit text to avoid token limits
             model: GEMINI_MODEL_CODE,
             contents: prompt,
         });
-        
+
         // Extract the generated text from response
         const generatedText = response?.candidates?.[0]?.content?.parts?.[0]?.text;
-        
+
         if (!generatedText) {
             throw new Error("No text found in Gemini API response");
         }
-        
+
         // Try to parse JSON from the response
         try {
             // Look for JSON in the response (sometimes wrapped in code blocks)
@@ -128,29 +129,29 @@ async function processPDFsInDirectory(directoryPath) {
     const attendanceResults = [];
 
     for (let i = 0; i < pdfFiles.length; i++) {
-        console.log(i/pdfFiles.length)
+        console.log(`Processing: ${i + 1}/${pdfFiles.length}`);
         const file = pdfFiles[i];
         const filePath = path.join(directoryPath, file);
-        
+
         try {
             // Extract text from PDF
             const text = await extractTextFromPDF(filePath);
-            
+
             // Extract attendance using GenAI
             const attendance = await extractAttendanceWithGenAI(text, file);
-            
+
             // Add metadata
             attendance.filename = file;
             attendance.filepath = filePath;
             attendance.processed_at = new Date().toISOString();
-            
+
             attendanceResults.push(attendance);
-            
+
             // Rate limiting delay
             if (i < pdfFiles.length - 1) { // Don't delay after the last file
                 await delay(rateLimitDelay);
             }
-            
+
         } catch (err) {
             attendanceResults.push({
                 filename: file,
@@ -169,9 +170,9 @@ async function processPDFsInDirectory(directoryPath) {
     }
 
     // Save results to JSON file
-    const outputPath = path.join(directoryPath, 'attendance_results.json');
     try {
-        fs.writeFileSync(outputPath, JSON.stringify(attendanceResults, null, 2));
+        fs.writeFileSync(OUTPUT_PATH, JSON.stringify(attendanceResults, null, 2));
+        console.log(`Results saved to: ${OUTPUT_PATH}`);
     } catch (saveError) {
         console.error('Failed to save results:', saveError.message);
     }
@@ -179,10 +180,15 @@ async function processPDFsInDirectory(directoryPath) {
     return attendanceResults;
 }
 
-// Run the processing
-console.log('Starting PDF attendance extraction...');
-console.log(`Using model: ${GEMINI_MODEL_CODE}`);
-console.log(`Rate limit: ${GEMINI_RATE_LIMIT} requests per minute`);
-console.log(`Processing directory: ${DIRECTORY_PATH}`);
+// Export the processPDFsInDirectory function
+export { processPDFsInDirectory };
 
-await processPDFsInDirectory(DIRECTORY_PATH);
+// Run the processing if this script is executed directly
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+    console.log('Starting PDF attendance extraction...');
+    console.log(`Using model: ${GEMINI_MODEL_CODE}`);
+    console.log(`Rate limit: ${GEMINI_RATE_LIMIT} requests per minute`);
+    console.log(`Processing directory: ${DIRECTORY_PATH}`);
+
+    processPDFsInDirectory(DIRECTORY_PATH);
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reform UK Councillor Absence Alert</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f0e3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border: 8px solid #333;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b0000;
+            margin-bottom: 30px;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+
+        #fileInput {
+            margin-bottom: 30px;
+            padding: 12px;
+            border: 2px dashed #777;
+            border-radius: 6px;
+            width: calc(100% - 24px);
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        #reportContainer {
+            margin-top: 40px;
+        }
+
+        .wanted-poster {
+            background-color: #ff6347; /* Tomato red for strong negative connotation */
+            color: #fff;
+            padding: 30px;
+            border: 4px solid #000;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .poster-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .councillor-name {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .missed-meetings {
+            font-size: 5em;
+            font-weight: bolder;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            margin-top: 15px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .missing-text {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .absence-info {
+            font-size: 1.1em;
+            margin-bottom: 6px;
+        }
+
+        select {
+            padding: 12px;
+            border: 2px solid #777;
+            border-radius: 6px;
+            width: calc(100% - 24px);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 1em;
+            font-family: 'Courier New', monospace;
+        }
+
+        button {
+            padding: 14px 28px;
+            background-color: #8b0000;
+            color: white;
+            border: 2px solid #000;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Courier New', monospace;
+        }
+
+        button:hover {
+            background-color: #660000;
+        }
+
+        .error {
+            color: #8b0000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #leagueTableContainer {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #8b0000;
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .league-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .league-table th, .league-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .league-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .worst-attendance {
+            background-color: #ffcdd2; /* Light red to emphasize worst */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reform UK Councillor Absence Alert</h1>
+        <input type="file" id="fileInput" accept=".json">
+        <div id="reportContainer">
+            </div>
+    </div>
+
+    <div id="leagueTableContainer">
+        </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', handleFile);
+        const reportContainer = document.getElementById('reportContainer');
+        const leagueTableContainer = document.getElementById('leagueTableContainer');
+        let councillorsDataGlobal = [];
+
+        function handleFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        councillorsDataGlobal = JSON.parse(e.target.result);
+                        renderSelection(councillorsDataGlobal);
+                        renderLeagueTable(councillorsDataGlobal);
+                    } catch (error) {
+                        reportContainer.innerHTML = '<p class="error">Error parsing JSON file.</p>';
+                        console.error("Error parsing JSON:", error);
+                    }
+                }
+                reader.readAsText(file);
+            }
+        }
+
+        function renderSelection(data) {
+            let selectHTML = '<label for="councillorSelect">Select a Reform UK Councillor:</label><br>';
+            selectHTML += '<select id="councillorSelect">';
+            selectHTML += '<option value="">-- Select --</option>';
+            data.forEach(councillor => {
+                selectHTML += `<option value='${councillor.uid}'>${councillor.name}</option>`;
+            });
+            selectHTML += '</select><br>';
+            selectHTML += '<button onclick="generateReport()">Issue Absence Notice</button>';
+            reportContainer.innerHTML = selectHTML;
+        }
+
+        function generateReport() {
+            const selectElement = document.getElementById('councillorSelect');
+            const selectedUid = selectElement.value;
+
+            if (selectedUid) {
+                const councillor = councillorsDataGlobal.find(c => c.uid === selectedUid);
+                if (councillor) {
+                    const missedMeetings = councillor.expected - councillor.present;
+                    const absenceRate = (((councillor.expected - councillor.present) / councillor.expected) * 100).toFixed(2);
+
+                    let reportHTML = '<div class="wanted-poster">';
+                    reportHTML += '<div class="poster-title">Reform UK ABSENCE RECORD</div>';
+                    reportHTML += `<div class="councillor-name">${councillor.name}</div>`;
+                    reportHTML += `<div class="missed-meetings">${missedMeetings}</div>`;
+                    reportHTML += '<div class="missing-text">Meetings Missed</div>';
+                    reportHTML += `<div class="absence-info">Expected: ${councillor.expected} | Attended: ${councillor.present}</div>`;
+                    reportHTML += `<div class="absence-info">(Absence Rate: ${absenceRate}%)</div>`;
+                    reportHTML += '</div>';
+                    reportContainer.innerHTML = reportHTML;
+                } else {
+                    reportContainer.innerHTML = '<p class="error">Councillor not found.</p>';
+                }
+            } else {
+                reportContainer.innerHTML = '<p>Please select a councillor.</p>';
+            }
+        }
+
+        function renderLeagueTable(data) {
+            if (!data || data.length === 0) {
+                leagueTableContainer.innerHTML = '<p>No councillor data available for the league table.</p>';
+                return;
+            }
+
+            const councillorsWithAbsence = data.map(councillor => {
+                const absencePercentage = councillor.expected === 0 ? 0 : ((councillor.expected - councillor.present) / councillor.expected) * 100;
+                return {...councillor, absencePercentage: absencePercentage};
+            });
+
+            councillorsWithAbsence.sort((a, b) => b.absencePercentage - a.absencePercentage);
+
+            let tableHTML = '<h2>Reform UK Absence League (Worst Attendance)</h2>';
+            tableHTML += '<table class="league-table">';
+            tableHTML += '<thead><tr><th>Rank</th><th>Councillor</th><th>Absence Rate</th><th>Missed</th></tr></thead><tbody>';
+
+            councillorsWithAbsence.forEach((councillor, index) => {
+                const rank = index + 1;
+                const missed = councillor.expected - councillor.present;
+                const absenceRateFormatted = councillor.absencePercentage.toFixed(2) + '%';
+                const isWorst = rank <= 3;
+
+                tableHTML += `<tr ${isWorst ? 'class="worst-attendance"' : ''}>`;
+                tableHTML += `<td>${rank}</td>`;
+                tableHTML += `<td>${councillor.name}</td>`;
+                tableHTML += `<td>${absenceRateFormatted}</td>`;
+                tableHTML += `<td>${missed}</td>`;
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            leagueTableContainer.innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>
