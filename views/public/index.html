@@ -158,6 +158,24 @@
       .container { padding: 1em; }
       th, td { font-size: 0.95em; }
     }
+      .footer {
+      text-align: center;
+      padding: 2em 0 1em 0;
+      font-size: 1.1em;
+      color: #555;
+      background: #f0f4f8;
+      border-top: 1px solid #e3eaf3;
+      letter-spacing: 0.02em;
+    }
+    .footer a {
+      color: #2a4d7c;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #E4003B;
+    }
   </style>
 </head>
 <body>
@@ -176,6 +194,10 @@
     <div id="view-worst" style="display:none">
       <div id="worstTable"></div>
     </div>
+    <footer class="footer">
+      Created with <span style="color:#E4003B;font-size:1.2em;">&#10084;&#65039;</span> in Hackney at <a href="https://campaignlab.uk/" target="_blank" rel="noopener">Campaign Lab</a>
+    </footer>
+  
   </div>
   <script>
     // Global poster functions (must be defined before usage)
