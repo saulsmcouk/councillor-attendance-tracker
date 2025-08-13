@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reform Councillor Attendance Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: #f7f9fb;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+    /* ...existing styles... */
+    .poster-view {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fffbe6;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      padding: 2em;
+      margin: 2em auto;
+      max-width: 480px;
+    }
+    .poster-headshot {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      margin-bottom: 1em;
+      background: #eee;
+    }
+    .poster-title {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 0 #fff, 4px 4px 0 #d32f2f33;
+      letter-spacing: 0.1em;
+    }
+    .poster-details {
+      font-size: 1.2em;
+      color: #222;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+    .poster-share {
+      margin-top: 1em;
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+    }
+    .poster-btn {
+      padding: 0.5em 1.2em;
+      border-radius: 8px;
+      background: #d32f2f;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    .poster-btn:hover {
+      background: #b71c1c;
+    }
+  max-width: 1080px;
+      margin: 2em auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 2em 2em 2em 2em;
+    }
+    h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      color: #2a4d7c;
+    }
+    label {
+      font-weight: 500;
+      margin-right: 1em;
+    }
+    select {
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      border: 1px solid #b0b8c1;
+      font-size: 1em;
+      background: #f0f4f8;
+      margin-bottom: 1em;
+    }
+    .tabs {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1.5em;
+    }
+    .tab {
+      padding: 0.5em 1.5em;
+      border-radius: 6px 6px 0 0;
+      background: #e3eaf3;
+      color: #2a4d7c;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background 0.2s;
+    }
+    .tab.active {
+      background: #fff;
+      border-bottom: 2px solid #2a4d7c;
+      color: #222;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    }
+    th, td {
+      padding: 0.75em 0.5em;
+      border-bottom: 1px solid #e3eaf3;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .headshot {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      margin-right: 0.5em;
+      background: #eee;
+      display: inline-block;
+    }
+    th {
+      background: #f0f4f8;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background: #f7f9fb;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 1em; }
+      th, td { font-size: 0.95em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div id="posterView" style="display:none"></div>
+  <h1>Reform Councillor Attendance Tracker</h1>
+    <div class="tabs">
+      <button class="tab active" id="tab-council">By Council</button>
+      <button class="tab" id="tab-worst">Worst Offenders</button>
+    </div>
+    <div id="view-council">
+      <label for="councilSelect">Select Council:</label>
+      <select id="councilSelect"></select>
+      <div id="attendance"></div>
+    </div>
+    <div id="view-worst" style="display:none">
+      <div id="worstTable"></div>
+    </div>
+  </div>
+  <script>
+    // Global poster functions (must be defined before usage)
+    window.showPoster = function(councillor) {
+      document.getElementById('view-council').style.display = 'none';
+      document.getElementById('view-worst').style.display = 'none';
+      document.getElementById('posterView').style.display = '';
+      fetch(`/api/headshot?url=${encodeURIComponent(councillor.detailsUrl)}`)
+        .then(res => res.json())
+        .then(data => {
+          const imgSrc = data.img || '';
+          document.getElementById('posterView').innerHTML = `
+            <div class="poster-view" id="posterContent">
+              <div class="poster-title">Missing!</div>
+              <img class="poster-headshot" src="${imgSrc}" alt="${councillor.name}" />
+              <div class="poster-details">
+                <strong>${councillor.name}</strong><br>
+                <span>${councillor.councilName}</span><br>
+                <span>Meetings missed: <strong>${councillor.nrMissed}</strong> (${councillor.percentMissed}%)</span><br>
+                <span>Expected: ${councillor.expected}, Present: ${councillor.present}</span>
+              </div>
+              <div class="poster-share">
+                <button class="poster-btn" onclick="downloadPoster()">Download</button>
+                <button class="poster-btn" onclick="sharePoster()">Share</button>
+                <button class="poster-btn" onclick="closePoster()">Close</button>
+              </div>
+            </div>
+          `;
+        });
+    }
+    window.closePoster = function() {
+      document.getElementById('posterView').style.display = 'none';
+      document.getElementById('view-council').style.display = '';
+      document.getElementById('view-worst').style.display = '';
+    }
+    window.downloadPoster = function() {
+      const poster = document.getElementById('posterContent');
+      const img = poster.querySelector('.poster-headshot');
+      function renderCanvas() {
+        html2canvas(poster).then(canvas => {
+          const link = document.createElement('a');
+          link.download = 'missing-poster.png';
+          link.href = canvas.toDataURL();
+          link.click();
+        });
+      }
+      if (img && !img.complete) {
+        img.onload = renderCanvas;
+      } else {
+        renderCanvas();
+      }
+    }
+    window.sharePoster = function() {
+      const poster = document.getElementById('posterContent');
+      const img = poster.querySelector('.poster-headshot');
+      function renderCanvas() {
+        html2canvas(poster).then(canvas => {
+          canvas.toBlob(blob => {
+            const file = new File([blob], 'missing-poster.png', { type: 'image/png' });
+            if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+              navigator.share({ files: [file], title: 'Missing Councillor', text: 'See who is missing meetings!' });
+            } else {
+              alert('Sharing not supported on this device. Please download instead.');
+            }
+          });
+        });
+      }
+      if (img && !img.complete) {
+        img.onload = renderCanvas;
+      } else {
+        renderCanvas();
+      }
+    }
+
+    let councils = [];
+    let allCouncillors = [];
+    let allCouncillorsLoaded = false;
+    let sortWorstBy = 'percentMissed';
+    let sortWorstAsc = false;
+
+    document.getElementById('tab-council').onclick = function() {
+      document.getElementById('tab-council').classList.add('active');
+      document.getElementById('tab-worst').classList.remove('active');
+      document.getElementById('view-council').style.display = '';
+      document.getElementById('view-worst').style.display = 'none';
+    };
+    document.getElementById('tab-worst').onclick = function() {
+      document.getElementById('tab-worst').classList.add('active');
+      document.getElementById('tab-council').classList.remove('active');
+      document.getElementById('view-council').style.display = 'none';
+      document.getElementById('view-worst').style.display = '';
+      // Show loading if not ready
+      const div = document.getElementById('worstTable');
+      if (!allCouncillorsLoaded) {
+        div.innerHTML = '<div style="padding:2em;text-align:center;">Loading councillor data...</div>';
+      } else {
+        renderWorstTable();
+      }
+    };
+
+    async function loadCouncils() {
+      const res = await fetch('/api/councils');
+      councils = await res.json();
+      const select = document.getElementById('councilSelect');
+      select.innerHTML = councils.map(c => `<option value="${c.fileName}">${c.councilName}</option>`).join('');
+      if (councils.length) loadAttendance(councils[0].fileName);
+      select.onchange = () => loadAttendance(select.value);
+      await loadAllCouncillors();
+      allCouncillorsLoaded = true;
+      // If user is on Worst Offenders tab, re-render after loading
+      if (document.getElementById('tab-worst').classList.contains('active')) {
+        renderWorstTable();
+      }
+    }
+
+    async function loadAttendance(fileName) {
+      const res = await fetch(`/api/council/${fileName}`);
+      const data = await res.json();
+      const div = document.getElementById('attendance');
+      // Find baseUrl for this council
+      const councilObj = councils.find(c => c.fileName === fileName);
+      const baseUrl = councilObj ? councilObj.baseUrl : '';
+      let councillors = data.reformAttendanceData.map(c => ({
+        ...c,
+        percent: c.expected > 0 ? Math.round((c.present / c.expected) * 100) : 0,
+        detailsUrl: baseUrl ? `${baseUrl}mgUserInfo.aspx?UID=${c.uid}` : ''
+      }));
+      let sortAsc = true;
+      function renderTable() {
+        const sorted = [...councillors].sort((a, b) => sortAsc ? a.percent - b.percent : b.percent - a.percent);
+        div.innerHTML = `<h2>${data.councilName}</h2>` +
+          `<table><tr><th>Headshot</th><th>Name</th><th>Expected</th><th>Present</th><th id="percentHeader" style="cursor:pointer;">% Attended &#x25B2;</th><th></th></tr>` +
+          sorted.map(c => {
+            const posterData = {
+              ...c,
+              councilName: data.councilName,
+              percentMissed: c.expected > 0 ? Math.round(100 - (c.present / c.expected) * 100) : 0,
+              nrMissed: c.expected - c.present
+            };
+            window._councillorPosterData = window._councillorPosterData || {};
+            window._councillorPosterData[c.uid] = posterData;
+            return `<tr><td><img class="headshot" id="headshot-${c.uid}" alt="${c.name}" /></td><td><a href="${c.detailsUrl}" target="_blank" rel="noopener">${c.name}</a></td><td>${c.expected}</td><td>${c.present}</td><td>${c.percent}%</td><td><button class="poster-btn" data-uid="${c.uid}">Missing Poster</button></td></tr>`;
+          }).join('') + '</table>';
+        // Attach event listeners for poster buttons
+        setTimeout(() => {
+          div.querySelectorAll('.poster-btn[data-uid]').forEach(btn => {
+            btn.onclick = function() {
+              const uid = btn.getAttribute('data-uid');
+              showPoster(window._councillorPosterData[uid]);
+            };
+          });
+        }, 0);
+        // Fetch headshots asynchronously
+        sorted.forEach(c => {
+          fetch(`/api/headshot?url=${encodeURIComponent(c.detailsUrl)}`)
+            .then(res => res.json())
+            .then(data => {
+              if (data.img) {
+                const imgEl = document.getElementById(`headshot-${c.uid}`);
+                if (imgEl) imgEl.src = data.img;
+              }
+            });
+        });
+        document.getElementById('percentHeader').onclick = () => {
+          sortAsc = !sortAsc;
+          document.getElementById('percentHeader').innerHTML = `% Attended ${sortAsc ? '&#x25B2;' : '&#x25BC;'}`;
+          renderTable();
+        };
+      }
+      renderTable();
+    }
+
+    async function loadAllCouncillors() {
+      allCouncillors = [];
+      allCouncillorsLoaded = false;
+      for (const council of councils) {
+        const res = await fetch(`/api/council/${council.fileName}`);
+        const data = await res.json();
+        if (data.reformAttendanceData) {
+          allCouncillors.push(...data.reformAttendanceData.map(c => {
+            // Find the correct council object for this councillor
+            const councilObj = councils.find(cc => cc.councilName === data.councilName);
+            const baseUrl = councilObj ? councilObj.baseUrl : '';
+            return {
+              ...c,
+              councilName: data.councilName,
+              percentMissed: c.expected > 0 ? Math.round(100 - (c.present / c.expected) * 100) : 0,
+              nrMissed: c.expected - c.present,
+              detailsUrl: baseUrl ? `${baseUrl}mgUserInfo.aspx?UID=${c.uid}` : ''
+            };
+          }));
+        }
+      }
+      allCouncillorsLoaded = true;
+    }
+
+    function renderWorstTable() {
+      const div = document.getElementById('worstTable');
+      let sorted = [...allCouncillors];
+      if (sortWorstBy === 'percentMissed') {
+        sorted.sort((a, b) => sortWorstAsc ? a.percentMissed - b.percentMissed : b.percentMissed - a.percentMissed);
+      } else {
+        sorted.sort((a, b) => sortWorstAsc ? a.nrMissed - b.nrMissed : b.nrMissed - a.nrMissed);
+      }
+      div.innerHTML = `<table><tr>
+        <th>Headshot</th>
+        <th>Name</th>
+        <th>Council</th>
+        <th>Expected</th>
+        <th>Present</th>
+        <th id="percentMissedHeader" style="cursor:pointer;">% Missed ${sortWorstBy==='percentMissed'?(sortWorstAsc?'&#x25B2;':'&#x25BC;'):''}</th>
+        <th id="nrMissedHeader" style="cursor:pointer;">Nr Missed ${sortWorstBy==='nrMissed'?(sortWorstAsc?'&#x25B2;':'&#x25BC;'):''}</th>
+        <th></th>
+      </tr>` +
+        sorted.map(c => {
+          window._councillorPosterData = window._councillorPosterData || {};
+          window._councillorPosterData[c.uid] = c;
+          return `<tr><td><img class="headshot" id="worst-headshot-${c.uid}" alt="${c.name}" /></td><td><a href="${c.detailsUrl}" target="_blank" rel="noopener">${c.name}</a></td><td>${c.councilName}</td><td>${c.expected}</td><td>${c.present}</td><td>${c.percentMissed}%</td><td>${c.nrMissed}</td><td><button class="poster-btn" data-uid="${c.uid}">Missing Poster</button></td></tr>`;
+        }).join('') + '</table>';
+      // Attach event listeners for poster buttons
+      setTimeout(() => {
+        div.querySelectorAll('.poster-btn[data-uid]').forEach(btn => {
+          btn.onclick = function() {
+            const uid = btn.getAttribute('data-uid');
+            showPoster(window._councillorPosterData[uid]);
+          };
+        });
+      }, 0);
+  // ...existing code...
+    // SPA: Show poster view
+    window.showPoster = function(councillor) {
+      // Hide other views
+      document.getElementById('view-council').style.display = 'none';
+      document.getElementById('view-worst').style.display = 'none';
+      document.getElementById('posterView').style.display = '';
+      // Get headshot
+      fetch(`/api/headshot?url=${encodeURIComponent(councillor.detailsUrl)}`)
+        .then(res => res.json())
+        .then(data => {
+          const imgSrc = data.img || '';
+          document.getElementById('posterView').innerHTML = `
+            <div class="poster-view" id="posterContent">
+              <div class="poster-title">Missing!</div>
+              <img class="poster-headshot" src="${imgSrc}" alt="${councillor.name}" />
+              <div class="poster-details">
+                <strong>${councillor.name}</strong><br>
+                <span>${councillor.councilName}</span><br>
+                <span>Meetings missed: <strong>${councillor.nrMissed}</strong> (${councillor.percentMissed}%)</span><br>
+                <span>Expected: ${councillor.expected}, Present: ${councillor.present}</span>
+              </div>
+              <div class="poster-share">
+                <button class="poster-btn" onclick="downloadPoster()">Download</button>
+                <button class="poster-btn" onclick="sharePoster()">Share</button>
+                <button class="poster-btn" onclick="closePoster()">Close</button>
+              </div>
+            </div>
+          `;
+        });
+    }
+    window.closePoster = function() {
+      document.getElementById('posterView').style.display = 'none';
+      document.getElementById('view-council').style.display = '';
+      document.getElementById('view-worst').style.display = '';
+    }
+    window.downloadPoster = function() {
+      // Download poster as image
+      const poster = document.getElementById('posterContent');
+      html2canvas(poster).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'missing-poster.png';
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
+    window.sharePoster = function() {
+      // Share poster using Web Share API if available
+      const poster = document.getElementById('posterContent');
+      html2canvas(poster).then(canvas => {
+        canvas.toBlob(blob => {
+          const file = new File([blob], 'missing-poster.png', { type: 'image/png' });
+          if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+            navigator.share({ files: [file], title: 'Missing Councillor', text: 'See who is missing meetings!' });
+          } else {
+            alert('Sharing not supported on this device. Please download instead.');
+          }
+        });
+      });
+    }
+      // Fetch headshots asynchronously
+      sorted.forEach(c => {
+        fetch(`/api/headshot?url=${encodeURIComponent(c.detailsUrl)}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.img) {
+              const imgEl = document.getElementById(`worst-headshot-${c.uid}`);
+              if (imgEl) imgEl.src = data.img;
+            }
+          });
+      });
+      document.getElementById('percentMissedHeader').onclick = () => {
+        if (sortWorstBy === 'percentMissed') sortWorstAsc = !sortWorstAsc;
+        else sortWorstBy = 'percentMissed', sortWorstAsc = false;
+        renderWorstTable();
+      };
+      document.getElementById('nrMissedHeader').onclick = () => {
+        if (sortWorstBy === 'nrMissed') sortWorstAsc = !sortWorstAsc;
+        else sortWorstBy = 'nrMissed', sortWorstAsc = false;
+        renderWorstTable();
+      };
+    }
+
+    loadCouncils();
+  </script>
+</body>
+</html>
