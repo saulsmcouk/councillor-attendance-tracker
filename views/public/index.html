@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Councillor Attendance Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    select, table { margin-top: 1em; }
+    th, td { padding: 0.5em; border: 1px solid #ccc; }
+    table { border-collapse: collapse; width: 100%; }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>Councillor Attendance Tracker</h1>
+  <label for="councilSelect">Select Council:</label>
+  <select id="councilSelect"></select>
+  <div id="attendance"></div>
+  <script>
+    async function loadCouncils() {
+      const res = await fetch('/api/councils');
+      const councils = await res.json();
+      const select = document.getElementById('councilSelect');
+      select.innerHTML = councils.map(c => `<option value="${c.fileName}">${c.councilName}</option>`).join('');
+      if (councils.length) loadAttendance(councils[0].fileName);
+      select.onchange = () => loadAttendance(select.value);
+    }
+    async function loadAttendance(fileName) {
+      const res = await fetch(`/api/council/${fileName}`);
+      const data = await res.json();
+      const div = document.getElementById('attendance');
+      if (!data.reformAttendanceData) { div.innerHTML = '<p>No data found.</p>'; return; }
+      // Add percentage attended to each councillor
+      let councillors = data.reformAttendanceData.map(c => ({
+        ...c,
+        percent: c.expected > 0 ? Math.round((c.present / c.expected) * 100) : 0
+      }));
+
+      // Sorting state
+      let sortAsc = true;
+      function renderTable() {
+        const sorted = [...councillors].sort((a, b) => sortAsc ? a.percent - b.percent : b.percent - a.percent);
+        div.innerHTML = `<h2>${data.councilName}</h2>` +
+          `<table><tr><th>Name</th><th>Expected</th><th>Present</th><th id="percentHeader" style="cursor:pointer;">% Attended &#x25B2;</th></tr>` +
+          sorted.map(c => `<tr><td>${c.name}</td><td>${c.expected}</td><td>${c.present}</td><td>${c.percent}%</td></tr>`).join('') + '</table>';
+        document.getElementById('percentHeader').onclick = () => {
+          sortAsc = !sortAsc;
+          document.getElementById('percentHeader').innerHTML = `% Attended ${sortAsc ? '&#x25B2;' : '&#x25BC;'}`;
+          renderTable();
+        };
+      }
+      renderTable();
+    }
+    loadCouncils();
+  </script>
+</body>
+</html>
