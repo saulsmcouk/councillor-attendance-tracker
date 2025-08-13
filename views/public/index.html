@@ -298,7 +298,7 @@
       // Find baseUrl for this council
       const councilObj = councils.find(c => c.fileName === fileName);
       const baseUrl = councilObj ? councilObj.baseUrl : '';
-      let councillors = data.reformAttendanceData.map(c => ({
+      let councillors = data.attendanceData.map(c => ({
         ...c,
         percent: c.expected > 0 ? Math.round((c.present / c.expected) * 100) : 0,
         detailsUrl: baseUrl ? `${baseUrl}mgUserInfo.aspx?UID=${c.uid}` : ''
@@ -306,19 +306,81 @@
       let sortAsc = true;
       function renderTable() {
         const sorted = [...councillors].sort((a, b) => sortAsc ? a.percent - b.percent : b.percent - a.percent);
-        div.innerHTML = `<h2>${data.councilName}</h2>` +
-          `<table><tr><th>Headshot</th><th>Name</th><th>Expected</th><th>Present</th><th id="percentHeader" style="cursor:pointer;">% Attended &#x25B2;</th><th></th></tr>` +
-          sorted.map(c => {
-            const posterData = {
-              ...c,
-              councilName: data.councilName,
-              percentMissed: c.expected > 0 ? Math.round(100 - (c.present / c.expected) * 100) : 0,
-              nrMissed: c.expected - c.present
+        // Party filter dropdown
+        const parties = Array.from(new Set(councillors.map(c => c.party).filter(Boolean)));
+        const filterDiv = document.createElement('div');
+        filterDiv.innerHTML = `<label for="partyFilter">Filter by party:</label> <select id="partyFilter"><option value="">All</option>${parties.map(p => `<option value="${p}">${p}</option>`).join('')}</select>`;
+        div.innerHTML = '';
+        div.appendChild(filterDiv);
+        // Render table with party backgrounds
+        function getPartyBg(party) {
+          if (!party) return '';
+          const p = party.toLowerCase();
+          if (p.includes('labour')) return 'background-color: rgba(228,0,59,0.2)';
+          if (p.includes('conservative')) return 'background-color: rgba(135,206,235,0.2)';
+          if (p.includes('liberal democr')) return 'background-color: rgba(250,166,26,0.2)';
+          if (p.includes('reform')) return 'background-color: rgba(18,182,207,0.2)';
+          if (p.includes('green')) return 'background-color: rgba(0,100,59,0.2)';
+          return '';
+        }
+        function renderPartyTable(list) {
+          return `<h2>${data.councilName}</h2>` +
+            `<table><tr><th>Headshot</th><th>Name</th><th>Party</th><th>Expected</th><th>Present</th><th id="percentHeader" style="cursor:pointer;">% Attended &#x25B2;</th><th></th></tr>` +
+            list.map(c => {
+              const posterData = {
+                ...c,
+                councilName: data.councilName,
+                percentMissed: c.expected > 0 ? Math.round(100 - (c.present / c.expected) * 100) : 0,
+                nrMissed: c.expected - c.present
+              };
+              window._councillorPosterData = window._councillorPosterData || {};
+              window._councillorPosterData[c.uid] = posterData;
+              return `<tr style="${getPartyBg(c.party)}"><td><img class="headshot" id="headshot-${c.uid}" alt="${c.name}" /></td><td><a href="${c.detailsUrl}" target="_blank" rel="noopener">${c.name}</a></td><td>${c.party || ''}</td><td>${c.expected}</td><td>${c.present}</td><td>${c.percent}%</td><td><button class="poster-btn" data-uid="${c.uid}">Missing Poster</button></td></tr>`;
+            }).join('') + '</table>';
+        }
+        div.innerHTML += renderPartyTable(sorted);
+        // Attach event listeners for poster buttons
+        setTimeout(() => {
+          div.querySelectorAll('.poster-btn[data-uid]').forEach(btn => {
+            btn.onclick = function() {
+              const uid = btn.getAttribute('data-uid');
+              showPoster(window._councillorPosterData[uid]);
             };
-            window._councillorPosterData = window._councillorPosterData || {};
-            window._councillorPosterData[c.uid] = posterData;
-            return `<tr><td><img class="headshot" id="headshot-${c.uid}" alt="${c.name}" /></td><td><a href="${c.detailsUrl}" target="_blank" rel="noopener">${c.name}</a></td><td>${c.expected}</td><td>${c.present}</td><td>${c.percent}%</td><td><button class="poster-btn" data-uid="${c.uid}">Missing Poster</button></td></tr>`;
-          }).join('') + '</table>';
+          });
+        }, 0);
+        // Fetch headshots asynchronously
+        sorted.forEach(c => {
+          fetch(`/api/headshot?url=${encodeURIComponent(c.detailsUrl)}`)
+            .then(res => res.json())
+            .then(data => {
+              if (data.img) {
+                const imgEl = document.getElementById(`headshot-${c.uid}`);
+                if (imgEl) imgEl.src = data.img;
+              }
+            });
+        });
+        document.getElementById('percentHeader').onclick = () => {
+          sortAsc = !sortAsc;
+          document.getElementById('percentHeader').innerHTML = `% Attended ${sortAsc ? '&#x25B2;' : '&#x25BC;'}`;
+          renderTable();
+        };
+        // Party filter event
+        filterDiv.querySelector('#partyFilter').onchange = e => {
+          const val = e.target.value;
+          let filtered = sorted;
+          if (val) filtered = sorted.filter(c => c.party === val);
+          div.innerHTML = '';
+          div.appendChild(filterDiv);
+          div.innerHTML += renderPartyTable(filtered);
+          setTimeout(() => {
+            div.querySelectorAll('.poster-btn[data-uid]').forEach(btn => {
+              btn.onclick = function() {
+                const uid = btn.getAttribute('data-uid');
+                showPoster(window._councillorPosterData[uid]);
+              };
+            });
+          }, 0);
+        };
         // Attach event listeners for poster buttons
         setTimeout(() => {
           div.querySelectorAll('.poster-btn[data-uid]').forEach(btn => {
@@ -354,8 +416,8 @@
       for (const council of councils) {
         const res = await fetch(`/api/council/${council.fileName}`);
         const data = await res.json();
-        if (data.reformAttendanceData) {
-          allCouncillors.push(...data.reformAttendanceData.map(c => {
+        if (data.attendanceData) {
+          allCouncillors.push(...data.attendanceData.map(c => {
             // Find the correct council object for this councillor
             const councilObj = councils.find(cc => cc.councilName === data.councilName);
             const baseUrl = councilObj ? councilObj.baseUrl : '';
@@ -380,9 +442,20 @@
       } else {
         sorted.sort((a, b) => sortWorstAsc ? a.nrMissed - b.nrMissed : b.nrMissed - a.nrMissed);
       }
+      function getPartyBg(party) {
+        if (!party) return '';
+        const p = party.toLowerCase();
+        if (p.includes('labour')) return 'background-color: rgba(228,0,59,0.2)';
+        if (p.includes('conservative')) return 'background-color: rgba(135,206,235,0.2)';
+        if (p.includes('lib dem')) return 'background-color: rgba(250,166,26,0.2)';
+        if (p.includes('reform')) return 'background-color: rgba(18,182,207,0.2)';
+        if (p.includes('green')) return 'background-color: rgba(0,100,59,0.2)';
+        return '';
+      }
       div.innerHTML = `<table><tr>
         <th>Headshot</th>
         <th>Name</th>
+        <th>Party</th>
         <th>Council</th>
         <th>Expected</th>
         <th>Present</th>
@@ -393,7 +466,7 @@
         sorted.map(c => {
           window._councillorPosterData = window._councillorPosterData || {};
           window._councillorPosterData[c.uid] = c;
-          return `<tr><td><img class="headshot" id="worst-headshot-${c.uid}" alt="${c.name}" /></td><td><a href="${c.detailsUrl}" target="_blank" rel="noopener">${c.name}</a></td><td>${c.councilName}</td><td>${c.expected}</td><td>${c.present}</td><td>${c.percentMissed}%</td><td>${c.nrMissed}</td><td><button class="poster-btn" data-uid="${c.uid}">Missing Poster</button></td></tr>`;
+          return `<tr style="${getPartyBg(c.party)}"><td><img class="headshot" id="worst-headshot-${c.uid}" alt="${c.name}" /></td><td><a href="${c.detailsUrl}" target="_blank" rel="noopener">${c.name}</a></td><td>${c.party || ''}</td><td>${c.councilName}</td><td>${c.expected}</td><td>${c.present}</td><td>${c.percentMissed}%</td><td>${c.nrMissed}</td><td><button class="poster-btn" data-uid="${c.uid}">Missing Poster</button></td></tr>`;
         }).join('') + '</table>';
       // Attach event listeners for poster buttons
       setTimeout(() => {
