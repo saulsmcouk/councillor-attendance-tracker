@@ -192,6 +192,9 @@
       <div id="attendance"></div>
     </div>
     <div id="view-worst" style="display:none">
+      <div style="margin-bottom: 1em;">
+        <button id="exportCsvBtn" class="poster-btn" style="background: #2a4d7c;">Export to CSV</button>
+      </div>
       <div id="worstTable"></div>
     </div>
     <footer class="footer">
@@ -581,6 +584,53 @@
         renderWorstTable();
       };
     }
+
+    // CSV Export function
+    function exportToCSV() {
+      if (!allCouncillorsLoaded || allCouncillors.length === 0) {
+        alert('No data available to export');
+        return;
+      }
+      
+      // Sort data same as table
+      let sorted = [...allCouncillors];
+      if (sortWorstBy === 'percentMissed') {
+        sorted.sort((a, b) => sortWorstAsc ? a.percentMissed - b.percentMissed : b.percentMissed - a.percentMissed);
+      } else {
+        sorted.sort((a, b) => sortWorstAsc ? a.nrMissed - b.nrMissed : b.nrMissed - a.nrMissed);
+      }
+      
+      // Create CSV headers
+      const headers = ['Name', 'Party', 'Council', 'Expected', 'Present', '% Missed', 'Nr Missed'];
+      
+      // Create CSV rows
+      const rows = sorted.map(c => [
+        `"${(c.name || '').replace(/"/g, '""')}"`,
+        `"${(c.party || '').replace(/"/g, '""')}"`,
+        `"${(c.councilName || '').replace(/"/g, '""')}"`,
+        c.expected || 0,
+        c.present || 0,
+        c.percentMissed || 0,
+        c.nrMissed || 0
+      ]);
+      
+      // Combine headers and rows
+      const csvContent = [headers.join(','), ...rows.map(row => row.join(','))].join('\n');
+      
+      // Create and download file
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', 'worst-offenders.csv');
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Add event listener for CSV export button
+    document.getElementById('exportCsvBtn').onclick = exportToCSV;
 
     loadCouncils();
   </script>
