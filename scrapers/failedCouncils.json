@@ -133,5 +133,21 @@
         "fileName": "gedling",
         "councilName": "Gedling Borough Council",
         "baseUrl": "https://democracy.gedling.gov.uk/"
+    },
+    {
+        "fileName": "somerset",
+        "councilName": "Somerset County Council",
+        "baseUrl": "https://democracy.somerset.gov.uk/"
+    },
+    {
+        "fileName": "west-lindsey",
+        "councilName": "West Lindsey District Council",
+        "baseUrl": "https://democracy.west-lindsey.gov.uk/"
+    },
+
+    {
+        "fileName": "sutton",
+        "councilName": "London Borough of Sutton",
+        "baseUrl": "https://moderngov.sutton.gov.uk/"
     }
 ]

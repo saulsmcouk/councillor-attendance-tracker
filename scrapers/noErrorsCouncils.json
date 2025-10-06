@@ -125,11 +125,6 @@
         "baseUrl": "http://democracy.stockport.gov.uk/"
     },
     {
-        "fileName": "sutton",
-        "councilName": "London Borough of Sutton",
-        "baseUrl": "https://moderngov.sutton.gov.uk/"
-    },
-    {
         "fileName": "tameside",
         "councilName": "Tameside Metropolitan Borough Council",
         "baseUrl": "http://tameside.moderngov.co.uk/"
@@ -305,11 +300,6 @@
         "baseUrl": "https://democracy.rushcliffe.gov.uk/"
     },
     {
-        "fileName": "west-lindsey",
-        "councilName": "West Lindsey District Council",
-        "baseUrl": "https://democracy.west-lindsey.gov.uk/"
-    },
-    {
         "fileName": "west-sussex",
         "councilName": "West Sussex County Council",
         "baseUrl": "https://westsussex.moderngov.co.uk/"
@@ -383,11 +373,6 @@
         "fileName": "runnymede",
         "councilName": "Runnymede Borough Council",
         "baseUrl": "https://democracy.runnymede.gov.uk/"
-    },
-    {
-        "fileName": "somerset",
-        "councilName": "Somerset County Council",
-        "baseUrl": "https://democracy.somerset.gov.uk/"
     },
     {
         "fileName": "southwark",
