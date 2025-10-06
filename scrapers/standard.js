@@ -1,6 +1,10 @@
 import * as cheerio from 'cheerio';
 import * as fs from 'fs/promises';
 
+// TODO:
+// Double check that redirects work (eg tunbridgeWells probably has a redirect) - looks like they dont so fix that
+// ok redirects probably do work - tunbridge wells just has a different issue fsr
+
 const getCouncillorsPage = async (councilName, baseUrl) => {
     const memberListUrl = 'mgMemberIndex.aspx?VW=TABLE&PIC=1';
 
@@ -59,13 +63,20 @@ const getAttendancePage = async (
 const getReformCouncillorUrls = (councillorsPageHtml) => {
     const $ = cheerio.load(councillorsPageHtml);
 
-    const $councillorRows = $(
-        '.mgContent:first > table:first > tbody:first > tr'
-    );
+    const $councillorRows = $('table.mgStatsTable:first > tbody:first > tr');
+
+    console.log(`${$councillorRows.length} councillors found.`);
 
     const $reformCouncillorRows = $councillorRows.filter((i, el) => {
         const partyCol = $(el).children('td')[2];
-        return $(partyCol).text().slice(0, 9) === 'Reform UK'; // If someone wants to add more parties to this modify this line
+        return (
+            $(partyCol)
+                .text()
+                .replaceAll('(', '')
+                .replaceAll(')', '')
+                .replaceAll(' ', '')
+                .slice(0, 6) === 'Reform'
+        ); // If someone wants to add more parties to this modify this line
     });
 
     let UIDs = [];
@@ -77,13 +88,15 @@ const getReformCouncillorUrls = (councillorsPageHtml) => {
         UIDs.push(uid);
     });
 
+    console.log(`${UIDs.length} reform councillors found`);
+
     return UIDs;
 };
 
 const getReformAttendanceData = (attendanceHtml, UIDs) => {
     const $ = cheerio.load(attendanceHtml);
 
-    const $rows = $('.mgContent:first > table:first > tbody:first > tr');
+    const $rows = $('table.mgStatsTable:first > tbody:first > tr');
 
     const $reformRows = $rows.filter((i, el) => {
         const councillorCol = $(el).children('td')[0];
@@ -111,7 +124,7 @@ const getReformAttendanceData = (attendanceHtml, UIDs) => {
     return data;
 };
 
-const collectReformAttendanceData = async (
+export const collectReformAttendanceData = async (
     councilName,
     baseUrl,
     startDate = { day: 1, month: 5, year: 2025 },
@@ -137,6 +150,7 @@ const main = async () => {
 
     for (let { fileName, councilName, baseUrl } of councils) {
         try {
+            console.log(`Gathering data for: ${councilName}`);
             const data = await collectReformAttendanceData(
                 councilName,
                 baseUrl

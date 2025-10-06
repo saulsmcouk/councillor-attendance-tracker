@@ -1,40 +1,5 @@
 [
     {
-        "fileName": "worcestershire",
-        "councilName": "Worcestershire County Council",
-        "baseUrl": "https://worcestershire.moderngov.co.uk/"
-    },
-    {
-        "fileName": "shropshire",
-        "councilName": "Shropshire County Council",
-        "baseUrl": "https://shropshire.gov.uk/committee-services/"
-    },
-    {
-        "fileName": "wiltshire",
-        "councilName": "Wiltshire County Council",
-        "baseUrl": "https://cms.wiltshire.gov.uk/"
-    },
-    {
-        "fileName": "devon",
-        "councilName": "Devon County Council",
-        "baseUrl": "https://democracy.devon.gov.uk/"
-    },
-    {
-        "fileName": "adurworthing",
-        "councilName": "Adur District Council & Worthing Borough Council",
-        "baseUrl": "https://democracy.adur-worthing.gov.uk/"
-    },
-    {
-        "fileName": "arun",
-        "councilName": "Arun District Council",
-        "baseUrl": "https://democracy.arun.gov.uk/"
-    },
-    {
-        "fileName": "babergh",
-        "councilName": "Babergh District Council",
-        "baseUrl": "https://baberghmidsuffolk.moderngov.co.uk/"
-    },
-    {
         "fileName": "epsom-and-ewell",
         "councilName": "Epsom and Ewell Borough Council",
         "baseUrl": "https://democracy.epsom-ewell.gov.uk/"
@@ -409,7 +374,6 @@
         "councilName": "Runnymede Borough Council",
         "baseUrl": "https://democracy.runnymede.gov.uk/"
     },
-
     {
         "fileName": "southwark",
         "councilName": "London Borough of Southwark",

@@ -1,40 +1,5 @@
 [
     {
-        "fileName": "worcestershire",
-        "councilName": "Worcestershire County Council",
-        "baseUrl": "https://worcestershire.moderngov.co.uk/"
-    },
-    {
-        "fileName": "shropshire",
-        "councilName": "Shropshire County Council",
-        "baseUrl": "https://shropshire.gov.uk/committee-services/"
-    },
-    {
-        "fileName": "wiltshire",
-        "councilName": "Wiltshire County Council",
-        "baseUrl": "https://cms.wiltshire.gov.uk/"
-    },
-    {
-        "fileName": "devon",
-        "councilName": "Devon County Council",
-        "baseUrl": "https://democracy.devon.gov.uk/"
-    },
-    {
-        "fileName": "adurworthing",
-        "councilName": "Adur District Council & Worthing Borough Council",
-        "baseUrl": "https://democracy.adur-worthing.gov.uk/"
-    },
-    {
-        "fileName": "arun",
-        "councilName": "Arun District Council",
-        "baseUrl": "https://democracy.arun.gov.uk/"
-    },
-    {
-        "fileName": "babergh",
-        "councilName": "Babergh District Council",
-        "baseUrl": "https://baberghmidsuffolk.moderngov.co.uk/"
-    },
-    {
         "fileName": "epsom-and-ewell",
         "councilName": "Epsom and Ewell Borough Council",
         "baseUrl": "https://democracy.epsom-ewell.gov.uk/"
@@ -43,6 +8,16 @@
         "fileName": "swindon",
         "councilName": "Swindon Borough Council",
         "baseUrl": "https://ww5.swindon.gov.uk/moderngov/"
+    },
+    {
+        "fileName": "aylesbury-vale",
+        "councilName": "Aylesbury Vale District Council",
+        "baseUrl": "https://aylesburyvale.moderngov.co.uk/"
+    },
+    {
+        "fileName": "barking-and-dagenham",
+        "councilName": "London Borough of Barking and Dagenham",
+        "baseUrl": "https://modgov.lbbd.gov.uk/internet/"
     },
     {
         "fileName": "basildon",
@@ -65,6 +40,11 @@
         "baseUrl": "https://democracy.brent.gov.uk/"
     },
     {
+        "fileName": "bromley",
+        "councilName": "London Borough of Bromley",
+        "baseUrl": "https://cds.bromley.gov.uk/"
+    },
+    {
         "fileName": "cambridge",
         "councilName": "Cambridge City Council",
         "baseUrl": "https://democracy.cambridge.gov.uk/"
@@ -85,6 +65,16 @@
         "baseUrl": "https://democracy.crawley.gov.uk/"
     },
     {
+        "fileName": "eastleigh",
+        "councilName": "Eastleigh Borough Council",
+        "baseUrl": "https://meetings.eastleigh.gov.uk/"
+    },
+    {
+        "fileName": "elmbridge",
+        "councilName": "Elmbridge Borough Council",
+        "baseUrl": "https://mygov.elmbridge.gov.uk/"
+    },
+    {
         "fileName": "enfield",
         "councilName": "London Borough of Enfield",
         "baseUrl": "https://governance.enfield.gov.uk/"
@@ -100,9 +90,19 @@
         "baseUrl": "https://moderngov.fareham.gov.uk/"
     },
     {
+        "fileName": "harrow",
+        "councilName": "London Borough of Harrow",
+        "baseUrl": "https://www.harrow.gov.uk/www2/"
+    },
+    {
         "fileName": "hastings",
         "councilName": "Hastings Borough Council",
         "baseUrl": "https://hastings.moderngov.co.uk/"
+    },
+    {
+        "fileName": "huntingdonshire",
+        "councilName": "Huntingdonshire District Council",
+        "baseUrl": "https://applications.huntingdonshire.gov.uk/moderngov/"
     },
     {
         "fileName": "kingston-upon-thames",
@@ -113,6 +113,11 @@
         "fileName": "kirklees",
         "councilName": "Kirklees Council",
         "baseUrl": "https://democracy.kirklees.gov.uk/"
+    },
+    {
+        "fileName": "lambeth",
+        "councilName": "London Borough of Lambeth",
+        "baseUrl": "https://moderngov.lambeth.gov.uk/"
     },
     {
         "fileName": "lewisham",
@@ -140,9 +145,29 @@
         "baseUrl": "http://democracy.newcastle.gov.uk/"
     },
     {
+        "fileName": "newham",
+        "councilName": "London Borough of Newham",
+        "baseUrl": "https://"
+    },
+    {
         "fileName": "portsmouth",
         "councilName": "Portsmouth City Council",
         "baseUrl": "http://democracy.portsmouth.gov.uk/"
+    },
+    {
+        "fileName": "richmond-upon-thames",
+        "councilName": "London Borough of Richmond upon Thames",
+        "baseUrl": "https://cabnet.richmond.gov.uk/"
+    },
+    {
+        "fileName": "rochdale",
+        "councilName": "Rochdale Metropolitan Borough Council",
+        "baseUrl": "http://democracy.rochdale.gov.uk/"
+    },
+    {
+        "fileName": "sefton",
+        "councilName": "Sefton Metropolitan Borough Council",
+        "baseUrl": "http://modgov.sefton.gov.uk/moderngov/"
     },
     {
         "fileName": "south-cambridgeshire",
@@ -155,9 +180,19 @@
         "baseUrl": "https://www.southampton.gov.uk/moderngov/"
     },
     {
+        "fileName": "st-helens",
+        "councilName": "St Helens Council",
+        "baseUrl": "http://moderngov.sthelens.gov.uk/"
+    },
+    {
         "fileName": "stockport",
         "councilName": "Stockport Metropolitan Borough Council",
         "baseUrl": "http://democracy.stockport.gov.uk/"
+    },
+    {
+        "fileName": "sutton",
+        "councilName": "London Borough of Sutton",
+        "baseUrl": "https://moderngov.sutton.gov.uk/"
     },
     {
         "fileName": "tameside",
@@ -173,6 +208,11 @@
         "fileName": "trafford",
         "councilName": "Trafford Metropolitan Borough Council",
         "baseUrl": "https://democratic.trafford.gov.uk/"
+    },
+    {
+        "fileName": "tunbridge-wells",
+        "councilName": "Tunbridge Wells Borough Council",
+        "baseUrl": "http://democracy.tunbridgewells.gov.uk/meetings/"
     },
     {
         "fileName": "west-lancashire",
@@ -210,9 +250,19 @@
         "baseUrl": "https://ashford.moderngov.co.uk/"
     },
     {
+        "fileName": "cheshire-west-and-chester",
+        "councilName": "Cheshire West and Chester Council",
+        "baseUrl": "http://cmttpublic.cheshirewestandchester.gov.uk/"
+    },
+    {
         "fileName": "lancaster",
         "councilName": "Lancaster City Council",
         "baseUrl": "https://committeeadmin.lancaster.gov.uk/"
+    },
+    {
+        "fileName": "dartford",
+        "councilName": "Dartford Borough Council",
+        "baseUrl": "https://committeedmz.dartford.gov.uk/"
     },
     {
         "fileName": "halton",
@@ -238,6 +288,11 @@
         "fileName": "scarborough",
         "councilName": "Scarborough Borough Council",
         "baseUrl": "https://democracy.scarborough.gov.uk/"
+    },
+    {
+        "fileName": "gloucestershire",
+        "councilName": "Gloucestershire County Council",
+        "baseUrl": "http://glostext.gloucestershire.gov.uk/"
     },
     {
         "fileName": "malvern-hills",
@@ -290,6 +345,16 @@
         "baseUrl": "https://democracy.middevon.gov.uk/"
     },
     {
+        "fileName": "north-devon",
+        "councilName": "North Devon District Council",
+        "baseUrl": "http://democracy.northdevon.gov.uk/"
+    },
+    {
+        "fileName": "stratford-on-avon",
+        "councilName": "Stratford-on-Avon District Council",
+        "baseUrl": "http://democracy.stratford.gov.uk/"
+    },
+    {
         "fileName": "tonbridge-and-malling",
         "councilName": "Tonbridge and Malling Borough Council",
         "baseUrl": "https://democracy.tmbc.gov.uk/"
@@ -315,9 +380,19 @@
         "baseUrl": "https://democracy.west-norfolk.gov.uk/"
     },
     {
+        "fileName": "forest-of-dean",
+        "councilName": "Forest of Dean District Council",
+        "baseUrl": "http://meetings.fdean.gov.uk/"
+    },
+    {
         "fileName": "brighton-and-hove",
         "councilName": "Brighton and Hove City Council",
         "baseUrl": "https://present.brighton-hove.gov.uk/"
+    },
+    {
+        "fileName": "tendring",
+        "councilName": "Tendring District Council",
+        "baseUrl": "https://tdcdemocracy.tendringdc.gov.uk/"
     },
     {
         "fileName": "blackburn-with-darwen",
@@ -335,6 +410,11 @@
         "baseUrl": "https://democracy.rushcliffe.gov.uk/"
     },
     {
+        "fileName": "west-lindsey",
+        "councilName": "West Lindsey District Council",
+        "baseUrl": "https://democracy.west-lindsey.gov.uk/"
+    },
+    {
         "fileName": "west-sussex",
         "councilName": "West Sussex County Council",
         "baseUrl": "https://westsussex.moderngov.co.uk/"
@@ -343,6 +423,11 @@
         "fileName": "north-west-leicestershire",
         "councilName": "North West Leicestershire District Council",
         "baseUrl": "https://minutes-1.nwleics.gov.uk/"
+    },
+    {
+        "fileName": "stoke-on-trent",
+        "councilName": "Stoke-on-Trent City Council",
+        "baseUrl": "http://www.moderngov.stoke.gov.uk/"
     },
     {
         "fileName": "buckinghamshire",
@@ -355,9 +440,19 @@
         "baseUrl": "https://democracy.cornwall.gov.uk/"
     },
     {
+        "fileName": "copeland",
+        "councilName": "Copeland Borough Council",
+        "baseUrl": "https://copeland.moderngov.co.uk/"
+    },
+    {
         "fileName": "gloucester",
         "councilName": "Gloucester City Council",
         "baseUrl": "https://democracy.gloucester.gov.uk/"
+    },
+    {
+        "fileName": "hampshire",
+        "councilName": "Hampshire County Council",
+        "baseUrl": "https://democracy.hants.gov.uk/"
     },
     {
         "fileName": "hertfordshire",
@@ -373,6 +468,11 @@
         "fileName": "oxfordshire",
         "councilName": "Oxfordshire County Council",
         "baseUrl": "https://mycouncil.oxfordshire.gov.uk/"
+    },
+    {
+        "fileName": "staffordshire",
+        "councilName": "Staffordshire County Council",
+        "baseUrl": "http://moderngov.staffordshire.gov.uk/"
     },
     {
         "fileName": "warwickshire",
@@ -409,7 +509,11 @@
         "councilName": "Runnymede Borough Council",
         "baseUrl": "https://democracy.runnymede.gov.uk/"
     },
-
+    {
+        "fileName": "somerset",
+        "councilName": "Somerset County Council",
+        "baseUrl": "https://democracy.somerset.gov.uk/"
+    },
     {
         "fileName": "southwark",
         "councilName": "London Borough of Southwark",
@@ -419,6 +523,11 @@
         "fileName": "swansea",
         "councilName": "City and County of Swansea Council",
         "baseUrl": "https://democracy.swansea.gov.uk/"
+    },
+    {
+        "fileName": "wandsworth",
+        "councilName": "London Borough of Wandsworth",
+        "baseUrl": "https://democracy.wandsworth.gov.uk/"
     },
     {
         "fileName": "gwynedd",
@@ -454,6 +563,11 @@
         "fileName": "derbyshire-dales",
         "councilName": "Derbyshire Dales District Council",
         "baseUrl": "https://democracy.derbyshiredales.gov.uk/"
+    },
+    {
+        "fileName": "gedling",
+        "councilName": "Gedling Borough Council",
+        "baseUrl": "https://democracy.gedling.gov.uk/"
     },
     {
         "fileName": "hertsmere",
