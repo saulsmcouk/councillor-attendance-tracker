@@ -3,6 +3,7 @@ import * as fs from 'fs/promises';
 
 // TODO:
 // Double check that redirects work (eg tunbridgeWells probably has a redirect) - looks like they dont so fix that
+// ok redirects probably do work - tunbridge wells just has a different issue fsr
 
 const getCouncillorsPage = async (councilName, baseUrl) => {
     const memberListUrl = 'mgMemberIndex.aspx?VW=TABLE&PIC=1';
