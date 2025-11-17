@@ -17,6 +17,8 @@ Nottinghamshire
 Staffordshire
 
 
+Now have 110 councils working more or less.
+
 Run by:
 1 - `npm i`
 2 - `cd scrapers`
@@ -34,3 +36,8 @@ Navigate to localhost:3000, and voila.
 
 # Todo 
 Transpose this entire list: https://github.com/poteris/council-scraper/blob/main/council_list_scraper/source_data/opencouncildata_councils.csv - probably an hour or two's work to transpose / check each one - and then we should have coverage of about 80% of councils
+
+
+Modify existing code to gather many parties data
+
+
