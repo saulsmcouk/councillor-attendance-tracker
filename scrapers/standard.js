@@ -94,6 +94,8 @@ const getReformCouncillorUrls = (councillorsPageHtml) => {
 };
 
 const getReformAttendanceData = (attendanceHtml, UIDs) => {
+    // eventually make this work for multiple parties - for now just setting party = "reform" for everyone
+    const party = 'reform';
     const $ = cheerio.load(attendanceHtml);
 
     const $rows = $('table.mgStatsTable:first > tbody:first > tr');
@@ -119,7 +121,7 @@ const getReformAttendanceData = (attendanceHtml, UIDs) => {
         const expected = parseInt($(children[1]).text());
         const present = parseInt($(children[2]).text());
 
-        data.push({ uid, name, expected, present });
+        data.push({ uid, name, expected, present, party });
     });
     return data;
 };
@@ -155,7 +157,8 @@ const main = async () => {
                 councilName,
                 baseUrl
             );
-            const obj = { councilName, reformAttendanceData: data };
+            // this object will eventually contain a list of councillor objects from all parties - for now everyone will be a reform councillor
+            const obj = { councilName, attendanceData: data };
             const jsonStr = JSON.stringify(obj);
             await fs.writeFile(`./out/${fileName}Data.json`, jsonStr);
         } catch (err) {
